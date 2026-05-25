@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj": {}
   },
   "projects": {
@@ -12,12 +13,29 @@
         "projectPath": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
         "packagesPath": "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\",
         "outputPath": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\obj\\",
+=======
+    "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
+        "projectName": "RetailBooking",
+        "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
+        "packagesPath": "C:\\Users\\Arfat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\obj\\",
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Sanjana Baragi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Arfat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +44,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
           "C:\\Program Files\\dotnet\\library-packs": {},
+=======
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,6 +90,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< HEAD
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
@@ -87,6 +109,8 @@
               "version": "[8.0.27, 8.0.27]"
             }
           ],
+=======
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

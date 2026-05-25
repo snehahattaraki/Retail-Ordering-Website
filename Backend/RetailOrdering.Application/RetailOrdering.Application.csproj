@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>RetailOrdering.Application</RootNamespace>
+    <AssemblyName>RetailOrdering.Application</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RetailOrdering.Domain\RetailOrdering.Domain.csproj" />
+    <ProjectReference Include="..\RetailOrdering.Shared\RetailOrdering.Shared.csproj" />
+  </ItemGroup>
+</Project>

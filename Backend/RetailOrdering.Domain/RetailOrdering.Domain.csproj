@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>RetailOrdering.Domain</AssemblyName>
+    <RootNamespace>RetailOrdering.Domain</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Retail Ordering Team</Authors>
+    <Description>Domain layer containing entities, enums, and constants for the Retail Ordering System</Description>
+  </PropertyGroup>
+
+</Project>
