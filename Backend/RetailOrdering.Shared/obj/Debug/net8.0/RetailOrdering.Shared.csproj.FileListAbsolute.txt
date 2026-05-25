@@ -1,0 +1,12 @@
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\bin\Debug\net8.0\RetailOrdering.Shared.deps.json
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\bin\Debug\net8.0\RetailOrdering.Shared.dll
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\bin\Debug\net8.0\RetailOrdering.Shared.pdb
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\RetailOrdering.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\RetailOrdering.Shared.AssemblyInfoInputs.cache
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\RetailOrdering.Shared.AssemblyInfo.cs
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\RetailOrdering.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\RetailOrdering.Shared.sourcelink.json
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\RetailOrdering.Shared.dll
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\refint\RetailOrdering.Shared.dll
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\RetailOrdering.Shared.pdb
+C:\Users\Arfat\hclfinals\Retail-Ordering-Website\Backend\RetailOrdering.Shared\obj\Debug\net8.0\ref\RetailOrdering.Shared.dll

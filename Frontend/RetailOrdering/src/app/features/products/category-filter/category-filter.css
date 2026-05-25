@@ -1,0 +1,6 @@
+.filter-panel {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.filter-panel button {
+  min-width: 76px;
+}

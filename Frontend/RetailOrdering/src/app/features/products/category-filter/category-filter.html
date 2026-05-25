@@ -1,0 +1,20 @@
+<div class="filter-panel p-3 rounded-3 bg-white shadow-sm">
+  <h6 class="mb-3">Categories</h6>
+  <div class="d-flex flex-wrap gap-2">
+    <button
+      type="button"
+      class="btn btn-sm"
+      [ngClass]="{ 'btn-outline-primary': activeCategory !== null, 'btn-primary': activeCategory === null }"
+      (click)="selectCategory(null)">
+      All
+    </button>
+    <button
+      *ngFor="let category of categories"
+      type="button"
+      class="btn btn-sm"
+      [ngClass]="{ 'btn-primary': activeCategory === category.categoryId, 'btn-outline-primary': activeCategory !== category.categoryId }"
+      (click)="selectCategory(category.categoryId)">
+      {{ category.name }}
+    </button>
+  </div>
+</div>
