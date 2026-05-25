@@ -1,1 +1,74 @@
-<p>manage-products works!</p>
+<div class="row g-4">
+    <div class="col-xl-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white border-bottom">
+                <h6 class="mb-0">Products</h6>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of products()">
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.category }}</td>
+                            <td>${{ product.price.toFixed(2) }}</td>
+                            <td>{{ product.stockQty }}</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-secondary me-2"
+                                    (click)="editProduct(product)">Edit</button>
+                                <button class="btn btn-sm btn-outline-danger"
+                                    (click)="deleteProduct(product.productId)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4">
+        <div class="card shadow-sm border-0 h-100">
+            <div class="card-header bg-white border-bottom">
+                <h6 class="mb-0">Product Form</h6>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="saveProduct()">
+                    <input type="hidden" formControlName="productId" />
+
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input class="form-control" formControlName="name" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Category</label>
+                        <input class="form-control" formControlName="category" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Price</label>
+                        <input type="number" class="form-control" formControlName="price" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Stock Qty</label>
+                        <input type="number" class="form-control" formControlName="stockQty" />
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-outline-secondary" (click)="resetForm()">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
