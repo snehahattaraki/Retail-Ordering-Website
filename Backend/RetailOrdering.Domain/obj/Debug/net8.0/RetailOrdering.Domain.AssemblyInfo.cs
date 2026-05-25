@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("Domain layer containing entities, enums, and constants for the Retail Ordering Sy" +
     "stem"))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee6ee23f1a58d172cd96c2d6215cead4abecf9a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6268aba4e6238efdb03d65b1d3f8c2df0501f3aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("RetailOrdering.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RetailOrdering.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
