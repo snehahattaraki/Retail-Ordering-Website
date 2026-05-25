@@ -1,1 +1,14 @@
-<p>product-card works!</p>
+<article class="card product-card h-100 shadow-sm border-0 overflow-hidden">
+  <div class="card-body d-flex flex-column">
+    <div class="mb-3 text-uppercase text-muted small">Category {{ product.categoryId }}</div>
+    <h3 class="card-title h5 mb-2">{{ product.name }}</h3>
+    <div class="mb-3 text-primary fw-semibold fs-5">₹{{ product.price | number:'1.0-0' }}</div>
+    <p class="card-text text-muted mb-4">Stock: {{ product.stockQty }}</p>
+    <div class="mt-auto d-flex gap-2 flex-column flex-sm-row">
+      <a [routerLink]="['/products', product.productId]" class="btn btn-outline-secondary w-100">Details</a>
+      <button class="btn btn-primary w-100" (click)="onAddToCart()" [disabled]="product.stockQty === 0">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</article>

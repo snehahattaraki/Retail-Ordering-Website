@@ -1,1 +1,70 @@
-<p>cart-page works!</p>
+<section class="container py-5">
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-4">
+    <div>
+      <h1 class="h3 mb-1">Your Cart</h1>
+      <p class="text-muted mb-0">Review items, update quantities, remove products, or continue to checkout.</p>
+    </div>
+    <a routerLink="/products" class="btn btn-outline-primary btn-sm">Continue Shopping</a>
+  </div>
+
+  <ng-container *ngIf="(cartItems$ | async) as cartItems">
+    <div *ngIf="cartItems.length; else emptyCart">
+      <div class="card shadow-sm mb-4">
+        <div class="table-responsive">
+          <table class="table align-middle mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Product</th>
+                <th class="text-center">Qty</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cartItems">
+                <td>
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="icon-placeholder bg-secondary text-white rounded-3">🍽</div>
+                    <div>
+                      <div class="fw-semibold">{{ item.product?.name || 'Item' }}</div>
+                      <div class="text-muted small">₹{{ item.product?.price | number:'1.0-0' }}</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="text-center">
+                  <div class="d-inline-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-outline-secondary" (click)="decrease(item)">-</button>
+                    <span>{{ item.quantity }}</span>
+                    <button class="btn btn-sm btn-outline-secondary" (click)="increase(item)">+</button>
+                  </div>
+                </td>
+                <td class="text-end">₹{{ item.product?.price | number:'1.0-0' }}</td>
+                <td class="text-end fw-semibold">₹{{ item.totalPrice | number:'1.0-0' }}</td>
+                <td class="text-end">
+                  <button class="btn btn-sm btn-outline-danger" (click)="remove(item.productId)">Remove</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <a routerLink="/checkout" class="btn btn-primary btn-lg">Proceed to Checkout</a>
+        <div class="text-end">
+          <div class="text-muted">Cart total</div>
+          <div class="fs-4 fw-bold">₹{{ total$ | async | number:'1.0-0' }}</div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #emptyCart>
+      <div class="text-center py-5">
+        <h2 class="h4 mb-3">Your cart is empty</h2>
+        <p class="text-muted mb-4">Add a few delicious items to continue.</p>
+        <a routerLink="/products" class="btn btn-primary btn-lg">Shop Food</a>
+      </div>
+    </ng-template>
+  </ng-container>
+</section>

@@ -1,0 +1,8 @@
+.payment-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.payment-icon {
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+}
