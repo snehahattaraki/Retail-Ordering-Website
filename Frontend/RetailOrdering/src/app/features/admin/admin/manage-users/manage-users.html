@@ -1,0 +1,64 @@
+<div class="row g-4">
+  <div class="col-xl-7">
+    <div class="card shadow-sm border-0">
+      <div class="card-header bg-white border-bottom">
+        <h6 class="mb-0">Users</h6>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users()">
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.role }}</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-secondary me-2" (click)="editUser(user)">Edit</button>
+                <button class="btn btn-sm btn-outline-danger" (click)="deleteUser(user.userId)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-5">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-header bg-white border-bottom">
+        <h6 class="mb-0">User Form</h6>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="saveUser()">
+          <input type="hidden" formControlName="userId" />
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input class="form-control" formControlName="name" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" formControlName="email" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Role</label>
+            <select class="form-select" formControlName="role">
+              <option>Customer</option>
+              <option>Staff</option>
+              <option>Admin</option>
+            </select>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-outline-secondary" (click)="resetForm()">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
