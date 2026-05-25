@@ -1,1 +1,50 @@
-<p>register works!</p>
+<section class="auth-page py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="card shadow-sm border-0 auth-card">
+          <div class="card-body p-5">
+            <h2 class="mb-3 fw-bold">Create account</h2>
+            <p class="text-muted mb-4">Register with secure JWT authentication and start ordering right away.</p>
+
+            <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
+              <div class="mb-3">
+                <label class="form-label">Full name</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Your full name" />
+                <div class="form-text text-danger" *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+                  <span *ngIf="name?.errors?.['required']">Name is required.</span>
+                  <span *ngIf="name?.errors?.['minlength']">Enter at least 2 characters.</span>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" placeholder="you@example.com" />
+                <div class="form-text text-danger" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+                  <span *ngIf="email?.errors?.['required']">Email is required.</span>
+                  <span *ngIf="email?.errors?.['email']">Enter a valid email.</span>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password" />
+                <div class="form-text text-danger" *ngIf="password?.invalid && (password?.touched || password?.dirty)">
+                  <span *ngIf="password?.errors?.['required']">Password is required.</span>
+                  <span *ngIf="password?.errors?.['minlength']">Minimum 6 characters required.</span>
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-100 mb-3" type="submit">Register</button>
+            </form>
+
+            <div class="text-center text-muted">
+              Already registered? <a routerLink="/auth/login">Login here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

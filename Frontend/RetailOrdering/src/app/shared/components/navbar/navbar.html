@@ -1,0 +1,12 @@
+<nav class="navbar navbar-light bg-white border-bottom shadow-sm">
+  <div class="container d-flex flex-wrap align-items-center justify-content-between gap-3 py-2">
+    <a class="navbar-brand fw-bold text-primary" routerLink="/home">FoodOrder</a>
+    <div class="d-flex flex-wrap align-items-center gap-2">
+      <a class="nav-link" routerLink="/home">Home</a>
+      <a class="nav-link" routerLink="/admin" *ngIf="(isAuthenticated$ | async) && isAdmin">Admin</a>
+      <a class="nav-link" routerLink="/auth/login" *ngIf="!(isAuthenticated$ | async)">Login</a>
+      <a class="btn btn-primary btn-sm px-4" routerLink="/auth/register" *ngIf="!(isAuthenticated$ | async)">Register</a>
+      <button class="btn btn-outline-primary btn-sm px-4" *ngIf="isAuthenticated$ | async" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</nav>

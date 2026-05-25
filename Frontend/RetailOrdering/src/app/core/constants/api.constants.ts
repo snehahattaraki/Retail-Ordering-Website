@@ -1,11 +1,16 @@
-export const API_ENDPOINTS = {
-  AUTH: '/auth',
-  PRODUCTS: '/products',
-  CATEGORIES: '/categories',
-  BRANDS: '/brands',
-  CART: '/cart',
-  ORDERS: '/orders',
-  PAYMENTS: '/payments',
-  ADMIN: '/admin',
-  INVENTORY: '/inventory'
+export interface ApiResponse<T> {
+  success: boolean;
+  message: string;
+  data: T;
+}
+
+export const API = {
+  auth: {
+    login: 'auth/login',
+    register: 'auth/register',
+  },
+};
+
+export const STORAGE = {
+  token: 'food-ordering.token',
 };

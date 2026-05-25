@@ -1,0 +1,26 @@
+<div class="toast-wrapper">
+  <div
+    class="toast fade show"
+    role="alert"
+    *ngFor="let toast of toasts$ | async"
+    [ngClass]="{
+      'text-bg-success': toast.level === 'success',
+      'text-bg-warning': toast.level === 'warning',
+      'text-bg-danger': toast.level === 'danger',
+      'text-bg-info': toast.level === 'info'
+    }"
+  >
+    <div class="d-flex align-items-start">
+      <div class="toast-body py-3">
+        <strong class="d-block mb-1">{{ toast.title }}</strong>
+        <div class="toast-message">{{ toast.message }}</div>
+      </div>
+      <button
+        type="button"
+        class="btn-close btn-close-white me-2 mt-2"
+        aria-label="Close"
+        (click)="close(toast.id)"
+      ></button>
+    </div>
+  </div>
+</div>

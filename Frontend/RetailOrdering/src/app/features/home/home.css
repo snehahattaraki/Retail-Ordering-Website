@@ -1,0 +1,9 @@
+.hero-section {
+  min-height: calc(100vh - 180px);
+}
+.main-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+.feature-card {
+  min-height: 260px;
+}

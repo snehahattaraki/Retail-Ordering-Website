@@ -1,0 +1,12 @@
+.navbar {
+  min-height: 64px;
+}
+.navbar-brand {
+  letter-spacing: -0.02em;
+}
+.nav-link {
+  color: #444 !important;
+}
+.nav-link:hover {
+  color: #0d6efd !important;
+}

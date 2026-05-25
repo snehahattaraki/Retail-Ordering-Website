@@ -1,0 +1,9 @@
+.auth-page {
+  min-height: calc(100vh - 180px);
+}
+.auth-card {
+  border-radius: 1rem;
+}
+.form-text {
+  font-size: 0.9rem;
+}
