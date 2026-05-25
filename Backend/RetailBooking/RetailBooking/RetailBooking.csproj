@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <None Include="RetailOrdering.Application\RetailOrdering.Application.csproj" />
-    <None Include="RetailOrdering.Infrastructure\RetailOrdering.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
