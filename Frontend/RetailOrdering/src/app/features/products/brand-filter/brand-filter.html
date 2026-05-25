@@ -1,0 +1,20 @@
+<div class="filter-panel p-3 rounded-3 bg-white shadow-sm">
+  <h6 class="mb-3">Brands</h6>
+  <div class="d-flex flex-wrap gap-2">
+    <button
+      type="button"
+      class="btn btn-sm"
+      [ngClass]="{ 'btn-outline-secondary': activeBrand !== null, 'btn-secondary': activeBrand === null }"
+      (click)="selectBrand(null)">
+      All
+    </button>
+    <button
+      *ngFor="let brand of brands"
+      type="button"
+      class="btn btn-sm"
+      [ngClass]="{ 'btn-secondary': activeBrand === brand.brandId, 'btn-outline-secondary': activeBrand !== brand.brandId }"
+      (click)="selectBrand(brand.brandId)">
+      {{ brand.name }}
+    </button>
+  </div>
+</div>

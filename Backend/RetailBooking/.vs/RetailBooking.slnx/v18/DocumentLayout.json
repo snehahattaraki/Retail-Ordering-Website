@@ -1,12 +1,870 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Common\\PagedResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Common\\PagedResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\RegisterRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Auth\\RegisterRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\LoginRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Auth\\LoginRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\AuthResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Auth\\AuthResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\User\\UserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\User\\UserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Product\\ProductCreateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Product\\ProductUpdateDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Product\\ProductDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductQueryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Product\\ProductQueryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Category\\CategoryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Category\\CategoryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Brand\\BrandDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Brand\\BrandDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Packaging\\PackagingDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Packaging\\PackagingDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Inventory\\InventoryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Inventory\\InventoryDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartItemDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Cart\\CartItemDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RetailOrdering.Application\\DTOs\\Cart\\CartDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\retailordering.application.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\retailordering.application.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\auth\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\auth\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\common\\pagedresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\common\\pagedresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\user\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\user\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\product\\productdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\product\\productdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\category\\categorydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\category\\categorydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\brand\\branddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\brand\\branddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\packaging\\packagingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\packaging\\packagingdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\inventory\\inventorydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\inventory\\inventorydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\cart\\cartdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\cart\\cartdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\order\\orderdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\order\\orderdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\coupon\\coupondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\coupon\\coupondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\promotion\\promotiondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\promotion\\promotiondtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\payment\\paymentdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\payment\\paymentdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\loyalty\\loyaltydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\loyalty\\loyaltydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\dtos\\email\\emaildtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\dtos\\email\\emaildtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\services\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\services\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\services\\icouponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\services\\icouponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\services\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\services\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\interfaces\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\interfaces\\services\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\validators\\auth\\registervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\validators\\auth\\registervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\validators\\auth\\loginvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\validators\\auth\\loginvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\validators\\product\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\validators\\product\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\validators\\cart\\cartvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\validators\\cart\\cartvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\validators\\order\\ordervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\validators\\order\\ordervalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\validators\\coupon\\couponvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\validators\\coupon\\couponvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|e:\\retail-ordering-website\\backend\\retailbooking\\retailbooking\\retailordering.application\\services\\couponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4B9733-56A7-2C45-FEAC-DBF9100AD2C4}|RetailBooking\\RetailBooking.csproj|solutionrelative:retailbooking\\retailordering.application\\services\\couponservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Services\\PaymentService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\PaymentService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Services\\PaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:55:02.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "CouponService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\CouponService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Services\\CouponService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\CouponService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Services\\CouponService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:56.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Services\\OrderService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\OrderService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Services\\OrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:50.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Services\\CartService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\CartService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Services\\CartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:41.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Services\\ProductService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Services\\ProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:30.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Services\\AuthService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:20.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Mapping\\MappingProfile.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Mapping\\MappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:12.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CouponValidator.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Coupon\\CouponValidator.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Validators\\Coupon\\CouponValidator.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Coupon\\CouponValidator.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Validators\\Coupon\\CouponValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:06.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "OrderValidator.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Order\\OrderValidator.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Validators\\Order\\OrderValidator.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Order\\OrderValidator.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Validators\\Order\\OrderValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:54:02.077Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CartValidator.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Cart\\CartValidator.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Validators\\Cart\\CartValidator.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Cart\\CartValidator.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Validators\\Cart\\CartValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:57.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ProductValidator.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Product\\ProductValidator.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Validators\\Product\\ProductValidator.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Product\\ProductValidator.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Validators\\Product\\ProductValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:53.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "LoginValidator.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\LoginValidator.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\LoginValidator.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\LoginValidator.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\LoginValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:49.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "RegisterValidator.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\RegisterValidator.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\RegisterValidator.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\RegisterValidator.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Validators\\Auth\\RegisterValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:46.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:42.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IEmailService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IEmailService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IEmailService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:39.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:33.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ICouponService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICouponService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICouponService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICouponService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICouponService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:30.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IOrderService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IOrderService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IOrderService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:26.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICartService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICartService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICartService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\ICartService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:22.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IProductService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IProductService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:18.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IAuthService.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IAuthService.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:14.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:10.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "EmailDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Email\\EmailDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Email\\EmailDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Email\\EmailDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Email\\EmailDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:07.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LoyaltyDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Loyalty\\LoyaltyDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Loyalty\\LoyaltyDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Loyalty\\LoyaltyDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Loyalty\\LoyaltyDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:03.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PaymentDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Payment\\PaymentDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Payment\\PaymentDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Payment\\PaymentDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Payment\\PaymentDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:53:00.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "PromotionDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Promotion\\PromotionDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Promotion\\PromotionDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Promotion\\PromotionDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Promotion\\PromotionDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:56.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CouponDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Coupon\\CouponDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Coupon\\CouponDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Coupon\\CouponDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Coupon\\CouponDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:53.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OrderDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Order\\OrderDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Order\\OrderDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Order\\OrderDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Order\\OrderDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:47.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CartDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:43.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "InventoryDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Inventory\\InventoryDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Inventory\\InventoryDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Inventory\\InventoryDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Inventory\\InventoryDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:39.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PackagingDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Packaging\\PackagingDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Packaging\\PackagingDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Packaging\\PackagingDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Packaging\\PackagingDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:33.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BrandDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Brand\\BrandDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Brand\\BrandDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Brand\\BrandDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Brand\\BrandDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:30.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CategoryDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Category\\CategoryDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Category\\CategoryDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Category\\CategoryDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Category\\CategoryDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:26.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:21.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\User\\UserDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\User\\UserDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\User\\UserDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\User\\UserDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:16.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PagedResultDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Common\\PagedResultDto.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Common\\PagedResultDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Common\\PagedResultDto.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Common\\PagedResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:11.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\AuthDtos.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\AuthDtos.cs",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\AuthDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:52:07.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RetailOrdering.Application.csproj",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+              "RelativeDocumentMoniker": "RetailBooking\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+              "RelativeToolTip": "RetailBooking\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-25T06:51:49.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\User\\UserDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\User\\UserDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\User\\UserDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\User\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:09.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Auth\\AuthResponse.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\AuthResponse.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Auth\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:06.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Auth\\LoginRequest.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\LoginRequest.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Auth\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:02.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Auth\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:47:57.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PagedResponse.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Common\\PagedResponse.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Common\\PagedResponse.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Common\\PagedResponse.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Common\\PagedResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:47:21.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CartDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Cart\\CartDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Cart\\CartDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:55.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CartItemDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartItemDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Cart\\CartItemDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Cart\\CartItemDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Cart\\CartItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:49.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InventoryDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:46.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PackagingDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Packaging\\PackagingDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Packaging\\PackagingDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Packaging\\PackagingDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Packaging\\PackagingDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:43.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BrandDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Brand\\BrandDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Brand\\BrandDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Brand\\BrandDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Brand\\BrandDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:37.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Category\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Category\\CategoryDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Category\\CategoryDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Category\\CategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:34.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductQueryDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductQueryDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Product\\ProductQueryDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductQueryDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Product\\ProductQueryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:30.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Product\\ProductDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Product\\ProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:23.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductUpdateDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductUpdateDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Product\\ProductUpdateDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductUpdateDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Product\\ProductUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:17.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductCreateDto.cs",
+              "DocumentMoniker": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductCreateDto.cs",
+              "RelativeDocumentMoniker": "RetailOrdering.Application\\DTOs\\Product\\ProductCreateDto.cs",
+              "ToolTip": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailOrdering.Application\\DTOs\\Product\\ProductCreateDto.cs",
+              "RelativeToolTip": "RetailOrdering.Application\\DTOs\\Product\\ProductCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T06:48:14.338Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

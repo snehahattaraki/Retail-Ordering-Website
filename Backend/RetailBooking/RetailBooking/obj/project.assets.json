@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "version": 3,
+=======
   "version": 4,
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
   "targets": {
     "net8.0": {
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -447,23 +451,55 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\kmpom\\.nuget\\packages\\": {},
+=======
+<<<<<<< HEAD
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\": {},
+=======
     "C:\\Users\\Arfat\\.nuget\\packages\\": {},
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\kmpom\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
+      "projectName": "RetailBooking",
+      "projectPath": "C:\\Users\\kmpom\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
+      "packagesPath": "C:\\Users\\kmpom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kmpom\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\obj\\",
+=======
+<<<<<<< HEAD
+      "projectUniqueName": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
+      "projectName": "RetailBooking",
+      "projectPath": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
+      "packagesPath": "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\",
+      "outputPath": "E:\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\obj\\",
+=======
       "projectUniqueName": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
       "projectName": "RetailBooking",
       "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\RetailBooking.csproj",
       "packagesPath": "C:\\Users\\Arfat\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailBooking\\RetailBooking\\obj\\",
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
+        "C:\\Users\\kmpom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+<<<<<<< HEAD
+        "C:\\Users\\Sanjana Baragi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
         "C:\\Users\\Arfat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -472,11 +508,22 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+        "C:\\Program Files\\dotnet\\library-packs": {},
+=======
+<<<<<<< HEAD
+        "C:\\Program Files\\dotnet\\library-packs": {},
+=======
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
+<<<<<<< HEAD
+=======
           "framework": "net8.0",
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -491,11 +538,18 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
+<<<<<<< HEAD
+      "SdkAnalysisLevel": "10.0.200"
+    },
+    "frameworks": {
+      "net8.0": {
+=======
       "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net8.0": {
         "framework": "net8.0",
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
         "targetAlias": "net8.0",
         "dependencies": {
           "Swashbuckle.AspNetCore": {
@@ -514,6 +568,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.27, 8.0.27]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.27, 8.0.27]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.27, 8.0.27]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.27, 8.0.27]"
+          }
+        ],
+=======
+>>>>>>> 3cec85f8a929f6495a1314987f6e51ab1e62949f
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -522,7 +600,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json"
+=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+>>>>>>> a33afce01d61d2f212509ee12b1ec541eaae4c82
       }
     }
   }
