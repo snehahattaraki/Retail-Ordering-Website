@@ -1,1 +1,42 @@
-<p>register works!</p>
+<section class="auth-page d-flex align-items-center justify-content-center py-5">
+  <div class="auth-card card shadow-sm border-0 p-4 w-100 mx-3 mx-md-0" style="max-width: 460px;">
+    <div class="card-body">
+      <h2 class="card-title mb-3">Create account</h2>
+      <p class="text-muted mb-4">Register now to start ordering quickly and safely.</p>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input id="email" type="email" class="form-control" formControlName="email" placeholder="you@example.com" />
+          <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="form-text text-danger">
+            <div *ngIf="email?.errors?.['required']">Email is required.</div>
+            <div *ngIf="email?.errors?.['email']">Enter a valid email.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input id="password" type="password" class="form-control" formControlName="password" placeholder="••••••••" />
+          <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="form-text text-danger">
+            <div *ngIf="password?.errors?.['required']">Password is required.</div>
+            <div *ngIf="password?.errors?.['minlength']">Password must be at least 6 characters.</div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="confirmPassword" class="form-label">Confirm password</label>
+          <input id="confirmPassword" type="password" class="form-control" formControlName="confirmPassword" placeholder="••••••••" />
+          <div *ngIf="confirmPassword?.invalid && (confirmPassword?.dirty || confirmPassword?.touched)" class="form-text text-danger">
+            <div *ngIf="confirmPassword?.errors?.['required']">Confirm password is required.</div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary w-100" type="submit" [disabled]="form.invalid">Register</button>
+      </form>
+
+      <div class="mt-4 text-center text-muted">
+        Already have an account? <a routerLink="/auth/login">Sign in</a>
+      </div>
+    </div>
+  </div>
+</section>
