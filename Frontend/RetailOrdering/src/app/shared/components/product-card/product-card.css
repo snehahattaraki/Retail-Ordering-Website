@@ -1,0 +1,13 @@
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+.product-card .card-body {
+  min-height: 260px;
+}
+.product-card .btn {
+  min-height: 44px;
+}

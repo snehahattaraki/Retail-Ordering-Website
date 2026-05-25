@@ -1,26 +1,29 @@
-<div class="app-shell d-flex flex-column min-vh-100">
-  <app-navbar></app-navbar>
+﻿<div class="app-shell min-vh-100 bg-light">
+  <nav class="navbar navbar-expand-lg navbar-white border-bottom bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" routerLink="/products">Food Ordering</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" routerLink="/products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/cart">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" routerLink="/checkout">Checkout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <main class="page-content flex-grow-1">
+  <main class="py-4">
     <router-outlet></router-outlet>
   </main>
 
-  <app-footer></app-footer>
-
-  <div *ngIf="loading$ | async" class="loading-overlay d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
-
-  <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div *ngFor="let toast of toasts | async" class="toast-card alert alert-{{ toast.type }} shadow-sm mb-2" role="alert">
-      <div class="d-flex align-items-start justify-content-between">
-        <div>
-          <strong class="d-block">{{ toast.title }}</strong>
-          <div class="small">{{ toast.message }}</div>
-        </div>
-        <button type="button" class="btn-close" aria-label="Close" (click)="toastService.dismiss(toast.id)"></button>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1055;">
+    <div *ngFor="let toast of toastService.messages$ | async" class="toast show align-items-center text-bg-primary border-0 mb-2" role="alert">
+      <div class="d-flex">
+        <div class="toast-body">{{ toast.text }}</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" aria-label="Close" (click)="toastService.remove(toast.id)"></button>
       </div>
     </div>
   </div>

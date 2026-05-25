@@ -1,20 +1,22 @@
 import { Routes } from '@angular/router';
-import { Login } from './features/auth/login/login';
-import { Register } from './features/auth/register/register';
-import { Home } from './features/home/home';
-import { Dashboard } from './features/admin/dashboard/dashboard';
-import { authGuard } from './core/guards/auth-guard';
-import { adminGuard } from './core/guards/admin-guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'auth/login', component: Login },
-  { path: 'auth/register', component: Register },
-  { path: 'home', component: Home, canActivate: [authGuard] },
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
   {
-    path: 'admin/dashboard',
-    component: Dashboard,
-    canActivate: [authGuard, adminGuard],
+    path: 'products',
+    loadComponent: () => import('./features/products/product-list/product-list').then((m) => m.ProductListComponent),
   },
-  { path: '**', redirectTo: 'home' },
+  {
+    path: 'products/:id',
+    loadComponent: () => import('./features/products/product-details/product-details').then((m) => m.ProductDetailsComponent),
+  },
+  {
+    path: 'cart',
+    loadComponent: () => import('./features/cart/cart-page/cart-page').then((m) => m.CartPageComponent),
+  },
+  {
+    path: 'checkout',
+    loadComponent: () => import('./features/payments/checkout-page/checkout-page').then((m) => m.CheckoutPageComponent),
+  },
+  { path: '**', redirectTo: 'products' },
 ];
