@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mrCvHxluZZE=",
+  "dgSpecHash": "zaalD3GDCmQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512"
+  ],
   "logs": []
 }

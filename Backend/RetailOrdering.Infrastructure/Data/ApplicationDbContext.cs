@@ -15,6 +15,7 @@ namespace RetailOrdering.Infrastructure.Data
         public DbSet<Product> Products { get; set; } = null!;
         public DbSet<Order> Orders { get; set; } = null!;
         public DbSet<OrderItem> OrderItems { get; set; } = null!;
+        public DbSet<Cart> Carts { get; set; } = null!;
         public DbSet<CartItem> CartItems { get; set; } = null!;
         public DbSet<Coupon> Coupons { get; set; } = null!;
         public DbSet<Promotion> Promotions { get; set; } = null!;
@@ -22,11 +23,14 @@ namespace RetailOrdering.Infrastructure.Data
         public DbSet<Packaging> Packagings { get; set; } = null!;
         public DbSet<LoyaltyPoint> LoyaltyPoints { get; set; } = null!;
         public DbSet<Inventory> Inventories { get; set; } = null!;
+        public DbSet<ProductImage> ProductImages { get; set; } = null!;
+        public DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
+        public DbSet<EmailLog> EmailLogs { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            // Configure relationships and entity mappings here.
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace RetailOrdering.Infrastructure.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public async Task<T?> GetByIdAsync(Guid id)
+        public async Task<T?> GetByIdAsync(int id)
         {
             return await _dbSet.FindAsync(id);
         }
@@ -32,11 +32,10 @@ namespace RetailOrdering.Infrastructure.Repositories
             return entity;
         }
 
-        public async Task<T> UpdateAsync(T entity)
+        public async Task UpdateAsync(T entity)
         {
             _dbSet.Update(entity);
             await _context.SaveChangesAsync();
-            return entity;
         }
 
         public async Task DeleteAsync(T entity)

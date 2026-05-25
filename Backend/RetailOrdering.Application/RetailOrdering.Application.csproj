@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />`n    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,3 +16,5 @@
     <ProjectReference Include="..\RetailOrdering.Shared\RetailOrdering.Shared.csproj" />
   </ItemGroup>
 </Project>
+
+

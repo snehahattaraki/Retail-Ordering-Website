@@ -1,0 +1,6 @@
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Application\obj\Release\net8.0\RetailOrdering.Application.csproj.AssemblyReference.cache
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Application\obj\Release\net8.0\RetailOrdering.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Application\obj\Release\net8.0\RetailOrdering.Application.AssemblyInfoInputs.cache
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Application\obj\Release\net8.0\RetailOrdering.Application.AssemblyInfo.cs
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Application\obj\Release\net8.0\RetailOrdering.Application.csproj.CoreCompileInputs.cache
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Application\obj\Release\net8.0\RetailOrdering.Application.sourcelink.json

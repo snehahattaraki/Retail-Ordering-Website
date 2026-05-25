@@ -1,0 +1,14 @@
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\bin\Release\net8.0\RetailOrdering.Domain.deps.json
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\bin\Release\net8.0\RetailOrdering.Domain.dll
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\bin\Release\net8.0\RetailOrdering.Domain.pdb
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\bin\Release\net8.0\RetailOrdering.Domain.xml
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.AssemblyInfoInputs.cache
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.AssemblyInfo.cs
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.csproj.CoreCompileInputs.cache
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.sourcelink.json
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.dll
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\refint\RetailOrdering.Domain.dll
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.xml
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\RetailOrdering.Domain.pdb
+C:\Retail-Ordering-Website\Backend\RetailOrdering.Domain\obj\Release\net8.0\ref\RetailOrdering.Domain.dll

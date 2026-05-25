@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6E2UGfkzPKk=",
+  "dgSpecHash": "bN41GaUnZeA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512"
+  ],
   "logs": []
 }

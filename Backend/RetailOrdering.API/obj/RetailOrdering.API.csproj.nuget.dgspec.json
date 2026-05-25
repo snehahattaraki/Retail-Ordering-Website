@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj": {}
+    "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj": {
+    "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj",
+        "projectUniqueName": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj",
         "projectName": "RetailOrdering.API",
-        "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj",
-        "packagesPath": "C:\\Users\\Arfat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\obj\\",
+        "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\RetailOrdering.API.csproj",
+        "packagesPath": "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\",
+        "outputPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Arfat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sanjana Baragi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,11 +34,11 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj": {
-                "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj"
+              "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj": {
+                "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj"
               },
-              "c:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj"
+              "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj": {
+                "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj"
               }
             }
           }
@@ -91,6 +92,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -103,20 +122,20 @@
         }
       }
     },
-    "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj": {
+    "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+        "projectUniqueName": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
         "projectName": "RetailOrdering.Application",
-        "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
-        "packagesPath": "C:\\Users\\Arfat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\obj\\",
+        "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+        "packagesPath": "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\",
+        "outputPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Arfat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sanjana Baragi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -125,6 +144,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,11 +152,11 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj": {
-                "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj"
+              "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj": {
+                "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj"
               },
-              "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj": {
-                "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj"
+              "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj": {
+                "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj"
               }
             }
           }
@@ -174,6 +194,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -183,20 +217,20 @@
         }
       }
     },
-    "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj": {
+    "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj",
+        "projectUniqueName": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj",
         "projectName": "RetailOrdering.Domain",
-        "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj",
-        "packagesPath": "C:\\Users\\Arfat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\obj\\",
+        "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj",
+        "packagesPath": "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\",
+        "outputPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Arfat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sanjana Baragi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -205,6 +239,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -241,6 +276,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -250,20 +299,20 @@
         }
       }
     },
-    "c:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj": {
+    "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj",
         "projectName": "RetailOrdering.Infrastructure",
-        "projectPath": "c:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Arfat\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\obj\\",
+        "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\RetailOrdering.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\",
+        "outputPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Arfat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sanjana Baragi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -272,6 +321,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -279,14 +329,14 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj": {
-                "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj"
+              "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj": {
+                "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj"
               },
-              "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj": {
-                "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj"
+              "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj": {
+                "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Domain\\RetailOrdering.Domain.csproj"
               },
-              "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj": {
-                "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj"
+              "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj": {
+                "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj"
               }
             }
           }
@@ -334,6 +384,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -343,20 +407,20 @@
         }
       }
     },
-    "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj": {
+    "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj",
+        "projectUniqueName": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj",
         "projectName": "RetailOrdering.Shared",
-        "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj",
-        "packagesPath": "C:\\Users\\Arfat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\obj\\",
+        "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\RetailOrdering.Shared.csproj",
+        "packagesPath": "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\",
+        "outputPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Arfat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sanjana Baragi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -365,6 +429,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -390,6 +455,12 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -401,6 +472,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.27, 8.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

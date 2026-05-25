@@ -1,20 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "Zax57ffricM=",
+  "dgSpecHash": "MT4Ph53yxkY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+  "projectFilePath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Arfat\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
-    "C:\\Users\\Arfat\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\Sanjana Baragi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1903",
       "level": "Warning",
       "message": "Package 'AutoMapper' 12.0.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-rvv3-g6hj-g44x",
-      "projectPath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+      "projectPath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Arfat\\hclfinals\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
+      "filePath": "C:\\Retail-Ordering-Website\\Backend\\RetailOrdering.Application\\RetailOrdering.Application.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net8.0"
