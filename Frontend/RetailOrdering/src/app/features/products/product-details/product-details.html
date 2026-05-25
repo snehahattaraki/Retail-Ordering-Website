@@ -1,0 +1,36 @@
+<section class="container py-5">
+  <a routerLink="/products" class="link-secondary mb-4 d-inline-flex align-items-center">
+    <i class="bi bi-arrow-left me-2"></i> Back to products
+  </a>
+
+  <div class="bg-white rounded-4 shadow-sm p-4">
+    <ng-container *ngIf="product$ | async as product; else loading">
+      <div class="row g-4">
+        <div class="col-12 col-md-7">
+          <div class="border rounded-4 p-5 text-center bg-light">
+            <span class="display-1 text-muted">🍲</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <h2 class="mb-3">{{ product.name }}</h2>
+          <p class="mb-2 text-muted">Product ID: {{ product.productId }}</p>
+          <div class="mb-3 fs-3 text-primary">₹{{ product.price | number:'1.0-0' }}</div>
+          <div class="mb-3">
+            <span class="badge bg-success me-2">Stock {{ product.stockQty }}</span>
+            <span class="badge bg-secondary">Category {{ product.categoryId }}</span>
+          </div>
+          <p class="text-muted mb-4">Tap add to cart to quickly save this item for checkout.</p>
+          <button class="btn btn-lg btn-primary" (click)="addToCart(product)" [disabled]="product.stockQty === 0">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-template #loading>
+    <div class="text-center py-5">
+      <div class="spinner-border text-primary" role="status"></div>
+    </div>
+  </ng-template>
+</section>
