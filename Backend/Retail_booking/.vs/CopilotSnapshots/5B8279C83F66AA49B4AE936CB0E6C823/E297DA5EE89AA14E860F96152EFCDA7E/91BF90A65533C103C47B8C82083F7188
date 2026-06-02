@@ -1,0 +1,80 @@
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Application.DTOs.Product;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.Domain.Entities;
+using RetailOrdering.API.Responses;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ProductsController : ControllerBase
+{
+    private readonly AppDbContext _context;
+    private readonly IMapper _mapper;
+
+    public ProductsController(AppDbContext context, IMapper mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get([FromQuery] int page = 1, [FromQuery] int pageSize = 10, [FromQuery] int? categoryId = null, [FromQuery] string? search = null)
+    {
+        var query = _context.Products.AsQueryable();
+        if (categoryId.HasValue) query = query.Where(p => p.CategoryId == categoryId.Value);
+        if (!string.IsNullOrEmpty(search)) query = query.Where(p => p.Name.Contains(search));
+
+        var total = await query.CountAsync();
+        var items = await query.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync();
+        var dtos = _mapper.Map<IEnumerable<ProductDto>>(items);
+
+        var data = new { totalItems=total, page=page, pageSize=pageSize, totalPages = (int)Math.Ceiling(total / (double)pageSize), items = dtos };
+        return Ok(ApiResponse<object>.SuccessResponse(data));
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var product = await _context.Products.FindAsync(id);
+        if (product == null) return NotFound(ApiResponse<string>.FailResponse("Product not found"));
+        return Ok(ApiResponse<ProductDto>.SuccessResponse(_mapper.Map<ProductDto>(product)));
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost]
+    public async Task<IActionResult> Create(ProductDto dto)
+    {
+        var product = _mapper.Map<Product>(dto);
+        await _context.Products.AddAsync(product);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetById), new { id = product.Id }, ApiResponse<ProductDto>.SuccessResponse(_mapper.Map<ProductDto>(product), "Created"));
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, ProductDto dto)
+    {
+        var product = await _context.Products.FindAsync(id);
+        if (product == null) return NotFound(ApiResponse<string>.FailResponse("Product not found"));
+        _mapper.Map(dto, product);
+        _context.Products.Update(product);
+        await _context.SaveChangesAsync();
+        return Ok(ApiResponse<string>.SuccessResponse(null, "Updated"));
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var product = await _context.Products.FindAsync(id);
+        if (product == null) return NotFound(ApiResponse<string>.FailResponse("Product not found"));
+        _context.Products.Remove(product);
+        await _context.SaveChangesAsync();
+        return Ok(ApiResponse<string>.SuccessResponse(null, "Deleted"));
+    }
+}

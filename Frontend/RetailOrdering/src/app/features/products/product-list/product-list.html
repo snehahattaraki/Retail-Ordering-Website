@@ -1,0 +1,120 @@
+<section class="container py-5">
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4 gap-3">
+    <div>
+      <h1 class="display-6 fw-bold mb-1">Interactive Catalog</h1>
+      <p class="text-muted mb-0">Browse our comprehensive menu inventory.</p>
+    </div>
+    <div>
+      <a routerLink="/cart" class="btn btn-dark rounded-3 px-4 py-2 shadow-sm d-flex align-items-center">
+        <i class="bi bi-cart3 fs-5 me-2"></i> View Cart
+      </a>
+    </div>
+  </div>
+
+  <div class="bg-white p-3 p-md-4 rounded-4 mb-4 shadow-sm border">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="input-group search-group">
+          <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+          <input class="form-control border-start-0 ps-0" placeholder="Search by name..." [(ngModel)]="search" (ngModelChange)="currentPage = 1" />
+        </div>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select text-muted" [(ngModel)]="categoryFilter" (ngModelChange)="currentPage = 1">
+          <option value="">All Categories</option>
+          <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-select" [(ngModel)]="brandFilter" (ngModelChange)="currentPage = 1">
+          <option value="">All Brands</option>
+          <option *ngFor="let b of brands" [value]="b.id">{{ b.name }}</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <select class="form-select text-muted" [(ngModel)]="sortBy" (ngModelChange)="currentPage = 1">
+          <option value="popular">Best Selling</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center py-5 bg-white rounded-4 border" *ngIf="pagedProducts.length === 0">
+    <div class="display-4 text-muted opacity-25 mb-3"><i class="bi bi-search"></i></div>
+    <h4 class="fw-bold">No items found</h4>
+    <p class="text-muted">Adjust your filters to see more results.</p>
+    <button class="btn btn-outline-primary mt-2" (click)="search = ''; categoryFilter = ''; brandFilter = ''; sortBy = 'popular'">Reset Filters</button>
+  </div>
+
+  <div class="card shadow-sm border-0 rounded-4 overflow-hidden" *ngIf="pagedProducts.length > 0">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0 custom-table bg-white">
+        <thead class="table-light text-muted small text-uppercase tracking-wider">
+          <tr>
+            <th class="ps-4">Product Details</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th class="text-end">Unit Price</th>
+            <th class="text-center">Availability</th>
+            <th class="text-end pe-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of pagedProducts">
+            <td class="ps-4 py-3">
+              <div class="d-flex align-items-center gap-3">
+                <img [src]="product.imageUrl || 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=100&q=80'" 
+                     class="rounded-3 object-fit-cover border shadow-sm" width="48" height="48" alt="product thumbnail" />
+                <a [routerLink]="['/products', product.id]" class="fw-bold text-dark text-decoration-none hover-primary mb-0 d-block">{{ product.name }}</a>
+              </div>
+            </td>
+            <td>
+              <span class="badge bg-light text-secondary border">{{ product.categoryName || 'General' }}</span>
+            </td>
+            <td class="fw-medium text-muted">
+              {{ getBrandName($any(product).brandId) }}
+            </td>
+            <td class="text-end fw-black text-dark fs-6">
+              ₹{{ product.price | number:'1.2-2' }}
+            </td>
+            <td class="text-center">
+              <span class="badge rounded-pill px-3 py-2"
+                [class.bg-success-subtle]="product.stockQty > 5" [class.text-success]="product.stockQty > 5"
+                [class.bg-warning-subtle]="product.stockQty <= 5 && product.stockQty > 0" [class.text-warning]="product.stockQty <= 5 && product.stockQty > 0"
+                [class.bg-danger-subtle]="product.stockQty === 0" [class.text-danger]="product.stockQty === 0">
+                <i class="bi bi-circle-fill small me-1"></i> {{ product.stockQty > 0 ? product.stockQty + ' In Stock' : 'Out of Stock' }}
+              </span>
+            </td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-primary fw-medium px-3" 
+                        [disabled]="product.stockQty === 0" (click)="addToCart(product)">
+                  <i class="bi bi-plus"></i> Add
+                </button>
+                <a [routerLink]="['/products', product.id]" class="btn btn-sm btn-outline-secondary px-3">
+                  Details
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <nav class="mt-4" aria-label="Product pagination" *ngIf="pagedProducts.length > 0">
+    <ul class="pagination justify-content-center custom-pagination">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <button class="page-link shadow-sm" (click)="onPage(currentPage - 1)"><i class="bi bi-chevron-left"></i></button>
+      </li>
+      <li class="page-item" *ngFor="let page of [].constructor(pageCount); let index = index" [class.active]="currentPage === index + 1">
+        <button class="page-link shadow-sm fw-medium" (click)="onPage(index + 1)">{{ index + 1 }}</button>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === pageCount">
+        <button class="page-link shadow-sm" (click)="onPage(currentPage + 1)"><i class="bi bi-chevron-right"></i></button>
+      </li>
+    </ul>
+  </nav>
+</section>

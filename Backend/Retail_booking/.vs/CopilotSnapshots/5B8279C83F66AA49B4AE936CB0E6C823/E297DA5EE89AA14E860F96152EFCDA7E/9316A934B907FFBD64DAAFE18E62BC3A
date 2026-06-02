@@ -1,0 +1,137 @@
+﻿using System.Security.Claims;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Application.DTOs.Category;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.Domain.Entities;
+using RetailOrdering.API.Responses;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CategoriesController : ControllerBase
+{
+    private readonly AppDbContext _context;
+    private readonly IMapper _mapper;
+
+    public CategoriesController(AppDbContext context, IMapper mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
+
+    /// <summary>
+    /// Get all categories
+    /// </summary>
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        try
+        {
+            var categories = await _context.Categories.ToListAsync();
+            var dtos = _mapper.Map<IEnumerable<CategoryDto>>(categories);
+            return Ok(ApiResponse<IEnumerable<CategoryDto>>.SuccessResponse(dtos, "Categories retrieved"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in Get: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    /// <summary>
+    /// Get category by ID
+    /// </summary>
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        try
+        {
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null) return NotFound(ApiResponse<string>.FailResponse("Category not found"));
+            return Ok(ApiResponse<CategoryDto>.SuccessResponse(_mapper.Map<CategoryDto>(category), "Category retrieved"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in GetById: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    /// <summary>
+    /// Create category (Admin only)
+    /// </summary>
+    [Authorize(Roles = "Admin")]
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateCategoryDto dto)
+    {
+        try
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ApiResponse<string>.FailResponse("Invalid category data"));
+
+            var category = new Category { Name = dto.Name };
+            await _context.Categories.AddAsync(category);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetById), new { id = category.Id }, ApiResponse<CategoryDto>.SuccessResponse(_mapper.Map<CategoryDto>(category), "Category created"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in Create: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    /// <summary>
+    /// Update category (Admin only)
+    /// </summary>
+    [Authorize(Roles = "Admin")]
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, [FromBody] CreateCategoryDto dto)
+    {
+        try
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ApiResponse<string>.FailResponse("Invalid category data"));
+
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null) return NotFound(ApiResponse<string>.FailResponse("Category not found"));
+
+            category.Name = dto.Name;
+            _context.Categories.Update(category);
+            await _context.SaveChangesAsync();
+            return Ok(ApiResponse<string>.SuccessResponse(null, "Category updated"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in Update: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    /// <summary>
+    /// Delete category (Admin only)
+    /// </summary>
+    [Authorize(Roles = "Admin")]
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        try
+        {
+            var category = await _context.Categories.FindAsync(id);
+            if (category == null) return NotFound(ApiResponse<string>.FailResponse("Category not found"));
+
+            _context.Categories.Remove(category);
+            await _context.SaveChangesAsync();
+            return Ok(ApiResponse<string>.SuccessResponse(null, "Category deleted"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in Delete: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+}

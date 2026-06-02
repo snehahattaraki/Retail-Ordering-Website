@@ -1,0 +1,46 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow border-0 rounded-4 overflow-hidden">
+        
+        <div class="bg-primary p-5 text-white text-center position-relative">
+          <div class="position-absolute top-0 end-0 m-3">
+            <button class="btn btn-outline-light btn-sm rounded-pill" (click)="logout()">Sign Out</button>
+          </div>
+          <div class="display-1 mb-2"><i class="bi bi-person-circle"></i></div>
+          <h2 class="fw-bold mb-0">{{ user?.name || 'Valued Customer' }}</h2>
+          <p class="mb-0 opacity-75">{{ user?.email }}</p>
+        </div>
+
+        <div class="card-body p-5 bg-white">
+          <div class="row text-center mb-5">
+            <div class="col-4 border-end">
+              <h3 class="fw-bold text-primary">{{ stats.totalOrders || 0 }}</h3>
+              <span class="text-muted small text-uppercase tracking-wide">Orders</span>
+            </div>
+            <div class="col-4 border-end">
+              <h3 class="fw-bold text-primary">{{ user?.roles || 'Customer' }}</h3>
+              <span class="text-muted small text-uppercase tracking-wide">Account Type</span>
+            </div>
+            <div class="col-4">
+              <h3 class="fw-bold text-success">Active</h3>
+              <span class="text-muted small text-uppercase tracking-wide">Status</span>
+            </div>
+          </div>
+
+          <div class="d-grid gap-3">
+            <a routerLink="/orders" class="btn btn-light border p-3 text-start d-flex justify-content-between align-items-center rounded-3">
+              <span><i class="bi bi-receipt me-2 text-primary"></i> View Order History</span>
+              <i class="bi bi-chevron-right text-muted"></i>
+            </a>
+            <a routerLink="/cart" class="btn btn-light border p-3 text-start d-flex justify-content-between align-items-center rounded-3">
+              <span><i class="bi bi-cart3 me-2 text-primary"></i> View Shopping Cart</span>
+              <i class="bi bi-chevron-right text-muted"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

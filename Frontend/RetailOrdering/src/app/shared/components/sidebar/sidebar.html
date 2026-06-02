@@ -1,0 +1,23 @@
+<aside class="admin-sidebar d-flex flex-column p-3 bg-white border-end">
+  <a class="d-flex align-items-center mb-4 text-decoration-none" routerLink="/admin">
+    <img src="/assets/logo.svg" alt="logo" width="140" class="me-2" />
+  </a>
+  <ul class="nav nav-pills flex-column mb-4">
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/admin/products" routerLinkActive="active"><i class="bi bi-box-seam me-2"></i>Products</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/admin/orders" routerLinkActive="active"><i class="bi bi-receipt me-2"></i>Orders</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/admin/users" routerLinkActive="active"><i class="bi bi-people me-2"></i>Users</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/admin/inventory" routerLinkActive="active"><i class="bi bi-stack me-2"></i>Inventory</a>
+    </li>
+  </ul>
+  <div class="mt-auto small text-muted">Manage orders, products and users from one dashboard.</div>
+</aside>

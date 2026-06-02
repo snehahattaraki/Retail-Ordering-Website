@@ -1,0 +1,36 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Infrastructure.Data;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+[Authorize]
+public class CouponsController : ControllerBase
+{
+    private readonly AppDbContext _context;
+
+    public CouponsController(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    private int GetUserId() => int.Parse(User.Claims.First(c => c.Type == System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+
+    [HttpPost("apply")]
+    public async Task<IActionResult> Apply([FromBody] string code)
+    {
+        var coupon = await _context.Coupons.FirstOrDefaultAsync(c => c.Code == code);
+        if (coupon == null) return NotFound(new { message = "Coupon not found" });
+
+        var userId = GetUserId();
+        var cart = await _context.Carts.Include(c => c.CartItems).ThenInclude(ci => ci.Product).FirstOrDefaultAsync(c => c.UserId == userId);
+        if (cart == null || !cart.CartItems.Any()) return BadRequest(new { message = "Cart is empty" });
+
+        var total = cart.CartItems.Sum(ci => ci.Quantity * ci.Product.Price);
+        var discounted = total - coupon.Discount;
+        return Ok(new { total, discounted });
+    }
+}

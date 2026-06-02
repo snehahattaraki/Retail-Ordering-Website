@@ -1,0 +1,23 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(local)\\SQLEXPRESS;Database=RetailOrderingDb;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
+  ,"Jwt": {
+    "Key": "ChangeThis_SecretKey1234567890"
+  },
+  "Smtp": {
+    "From": "noreply@retail.com",
+    "FromName": "Retail Ordering",
+    "Host": "smtp.example.com",
+    "Port": "587",
+    "User": "",
+    "Pass": ""
+  }
+}

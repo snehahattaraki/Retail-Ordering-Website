@@ -1,0 +1,186 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.API.Responses;
+using System.Security.Claims;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+[Authorize(Roles = "Admin")]
+public class AdminController : ControllerBase
+{
+    private readonly AppDbContext _context;
+
+    public AdminController(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    /// <summary>
+    /// Get dashboard statistics
+    /// </summary>
+    [HttpGet("stats")]
+    public async Task<IActionResult> GetStats()
+    {
+        try
+        {
+            Console.WriteLine($"AUTH HEADER: {Request.Headers["Authorization"]}");
+            Console.WriteLine($"USER AUTHENTICATED: {User.Identity?.IsAuthenticated}");
+            Console.WriteLine($"USER ROLE: {User.FindFirst(ClaimTypes.Role)?.Value}");
+
+            var totalProducts = await _context.Products.CountAsync();
+            var totalOrders = await _context.Orders.CountAsync();
+            var totalUsers = await _context.Users.CountAsync();
+            var totalRevenue = await _context.Orders.SumAsync(o => (decimal?)o.TotalAmount) ?? 0m;
+
+            var stats = new
+            {
+                totalProducts,
+                totalOrders,
+                totalUsers,
+                totalRevenue
+            };
+
+            return Ok(ApiResponse<object>.SuccessResponse(stats, "Admin stats retrieved"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in GetStats: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    /// <summary>
+    /// Get all users with their roles
+    /// </summary>
+    [HttpGet("users")]
+    public async Task<IActionResult> GetUsers()
+    {
+        try
+        {
+            Console.WriteLine($"AUTH HEADER: {Request.Headers["Authorization"]}");
+            Console.WriteLine($"USER AUTHENTICATED: {User.Identity?.IsAuthenticated}");
+            Console.WriteLine($"USER ROLE: {User.FindFirst(ClaimTypes.Role)?.Value}");
+
+            var users = await _context.Users
+                .Include(u => u.Role)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.Name,
+                    u.Email,
+                    role = u.Role != null ? u.Role.Name : "Unknown"
+                })
+                .ToListAsync();
+
+            return Ok(ApiResponse<object>.SuccessResponse(users, "Users retrieved"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in GetUsers: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    /// <summary>
+    /// Get previous dashboard view
+    /// </summary>
+    [HttpGet("dashboard")]
+    public async Task<IActionResult> Dashboard()
+    {
+        try
+        {
+            var totalProducts = await _context.Products.CountAsync();
+            var totalOrders = await _context.Orders.CountAsync();
+            var totalUsers = await _context.Users.CountAsync();
+            var totalRevenue = await _context.Orders.SumAsync(o => (decimal?)o.TotalAmount) ?? 0m;
+
+            var dashboardData = new
+            {
+                totalProducts,
+                totalOrders,
+                totalUsers,
+                totalRevenue,
+                lowStockProducts = await _context.Products.Where(p => p.StockQty < 10).CountAsync()
+            };
+
+            return Ok(ApiResponse<object>.SuccessResponse(dashboardData, "Dashboard data retrieved"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in Dashboard: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [HttpGet("products/low-stock")]
+    public async Task<IActionResult> LowStockProducts()
+    {
+        try
+        {
+            var products = await _context.Products
+                .Where(p => p.StockQty < 10)
+                .Select(p => new { p.Id, p.Name, p.StockQty })
+                .ToListAsync();
+
+            return Ok(ApiResponse<IEnumerable<object>>.SuccessResponse(products, "Low stock products retrieved"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in LowStockProducts: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [HttpGet("orders/status")]
+    public async Task<IActionResult> OrdersByStatus()
+    {
+        try
+        {
+            var ordersByStatus = await _context.Orders
+                .GroupBy(o => o.Status)
+                .Select(g => new { status = g.Key.ToString(), count = g.Count() })
+                .ToListAsync();
+
+            return Ok(ApiResponse<IEnumerable<object>>.SuccessResponse(ordersByStatus, "Orders by status retrieved"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in OrdersByStatus: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [HttpPut("orders/{id}/status")]
+    public async Task<IActionResult> UpdateOrderStatus(int id, [FromBody] UpdateOrderStatusDto dto)
+    {
+        try
+        {
+            var order = await _context.Orders.FindAsync(id);
+            if (order == null) return NotFound(ApiResponse<string>.FailResponse("Order not found"));
+
+            if (Enum.TryParse<RetailOrdering.Domain.Entities.OrderStatus>(dto.Status, out var status))
+            {
+                order.Status = status;
+                _context.Orders.Update(order);
+                await _context.SaveChangesAsync();
+                return Ok(ApiResponse<string>.SuccessResponse(null, "Order status updated"));
+            }
+
+            return BadRequest(ApiResponse<string>.FailResponse("Invalid status"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in UpdateOrderStatus: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+}
+
+public class UpdateOrderStatusDto
+{
+    public string Status { get; set; } = null!;
+}

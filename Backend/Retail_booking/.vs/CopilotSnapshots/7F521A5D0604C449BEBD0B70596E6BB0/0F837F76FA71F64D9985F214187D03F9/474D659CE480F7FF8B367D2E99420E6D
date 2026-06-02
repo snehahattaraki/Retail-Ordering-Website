@@ -1,0 +1,57 @@
+﻿using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Infrastructure.Data;
+// Make sure to replace 'YourProjectNamespace' with your actual backend project namespace
+// using YourProjectNamespace.Data; 
+
+var builder = WebApplication.CreateBuilder(args);
+
+// ==========================================
+// 1. DATABASE CONFIGURATION
+// ==========================================
+
+// Retrieve the connection string from appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+// Register your Entity Framework DbContext with Pomelo MySQL
+// Note: Replace 'AppDbContext' with the actual name of your DbContext class
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(
+        connectionString,
+        ServerVersion.AutoDetect(connectionString)
+    ));
+
+// ==========================================
+// 2. CORE SYSTEM SERVICES
+// ==========================================
+
+builder.Services.AddControllers();
+
+// Swagger API Documentation Engine
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+var app = builder.Build();
+
+// ==========================================
+// 3. HTTP REQUEST PIPELINE (MIDDLEWARE)
+// ==========================================
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+
+// Handles routing mapping
+app.UseRouting();
+
+// Handles user permissions check
+app.UseAuthorization();
+
+// Maps attribute-routed API controllers
+app.MapControllers();
+
+app.Run();

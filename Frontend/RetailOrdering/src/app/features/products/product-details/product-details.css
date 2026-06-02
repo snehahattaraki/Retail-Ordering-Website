@@ -1,0 +1,30 @@
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.tracking-wider {
+  letter-spacing: 1.5px;
+}
+
+.w-35 {
+  width: 35%;
+}
+
+/* Specifications Table Adjustments */
+.spec-table th, .spec-table td {
+  border-color: #dee2e6;
+  font-size: 0.95rem;
+}
+
+.spec-table th {
+  font-weight: 600;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1; /* Always show up/down arrows in standard browsers */
+}

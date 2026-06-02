@@ -1,0 +1,54 @@
+<div class="row g-4">
+  <div class="col-xl-7">
+    <div class="card shadow-sm border-0">
+      <div class="card-header bg-white border-bottom">
+        <h6 class="mb-0">Product Categories</h6>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>ID</th>
+              <th>Category Name</th>
+              <th class="text-end">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cat of categories()">
+              <td class="text-muted">#{{ cat.id }}</td>
+              <td class="fw-medium">{{ cat.name }}</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-outline-secondary me-2" [disabled]="!isAdmin" (click)="editCategory(cat)">Edit</button>
+                <button class="btn btn-sm btn-outline-danger" [disabled]="!isAdmin" (click)="deleteCategory(cat.id)">Delete</button>
+              </td>
+            </tr>
+            <tr *ngIf="categories().length === 0">
+              <td colspan="3" class="text-center text-muted py-4">No categories found. Add one to get started.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-5">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-header bg-white border-bottom">
+        <h6 class="mb-0">Category Form</h6>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="form" (ngSubmit)="saveCategory()">
+          <input type="hidden" formControlName="id" />
+          <div class="mb-4">
+            <label class="form-label">Category Name</label>
+            <input class="form-control" formControlName="name" placeholder="e.g. Pizza, Cold Drinks, Breads" />
+          </div>
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Save Category</button>
+            <button type="button" class="btn btn-outline-secondary" (click)="resetForm()">Clear</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

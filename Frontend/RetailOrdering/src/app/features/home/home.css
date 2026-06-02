@@ -1,0 +1,141 @@
+/* Layout Accent Definitions */
+.fw-black {
+  font-weight: 800;
+}
+
+.tracking-wider {
+  letter-spacing: 1.5px;
+}
+
+.tracking-tight {
+  letter-spacing: -0.5px;
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+}
+
+.bg-white-10 {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Hero Elements Configuration */
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+}
+
+.hero-image-wrapper {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.header-img {
+  max-height: 380px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Search Group Specific Controls */
+.search-group .form-control:focus {
+  box-shadow: none;
+}
+
+.search-group:focus-within {
+  border-color: #0d6efd !important;
+  box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.15) !important;
+}
+
+/* Interactive Pill Navigation States */
+.category-pill {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: #dee2e6 !important;
+}
+
+.category-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.08) !important;
+}
+
+.category-pill.btn-light {
+  background-color: #ffffff;
+  color: #495057;
+}
+
+/* Uniform Card Structure Configuration */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.img-wrapper {
+  height: 200px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.transition-scale {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .transition-scale {
+  transform: scale(1.06);
+}
+
+/* Conversion Focus Cards */
+.promo-banner-card {
+  background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.hover-grow {
+  transition: transform 0.2s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.03);
+}
+
+/* Structural Animation Blocks */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Table Link Hovers */
+.hover-primary:hover {
+  color: #0d6efd !important;
+}
+
+/* Data Table Formatting */
+.custom-table th {
+  font-weight: 600;
+  border-bottom: 2px solid #e9ecef;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.custom-table td {
+  border-bottom: 1px solid #f8f9fa;
+}

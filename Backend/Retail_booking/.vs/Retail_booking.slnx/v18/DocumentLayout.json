@@ -1,0 +1,311 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\infrastructure\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:infrastructure\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\application\\dtos\\inventory\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:application\\dtos\\inventory\\inventorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\application\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:application\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\packagingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\packagingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:infrastructure\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\couponscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\couponscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\infrastructure\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:infrastructure\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|c:\\users\\padag\\desktop\\hcl .net training\\full stack projects\\hcl hackthon\\retail-ordering-website\\backend\\retail_booking\\api\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AADE07F3-6E7B-42D3-887D-9001804C2A9D}|Retail_booking.csproj|solutionrelative:api\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InventoryService.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\InventoryService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\InventoryService.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\InventoryService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\InventoryService.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwFUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T21:52:11.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InventoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Inventory\\InventoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T21:50:25.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\JwtService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T21:36:27.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Application\\Interfaces\\IJwtService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IJwtService.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Application\\Interfaces\\IJwtService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T21:35:50.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T21:32:58.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PackagingController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\PackagingController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PackagingController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\PackagingController.cs",
+              "RelativeToolTip": "API\\Controllers\\PackagingController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T18:17:49.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BrandsController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\BrandsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\BrandsController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\BrandsController.cs",
+              "RelativeToolTip": "API\\Controllers\\BrandsController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAUwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T06:40:41.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-02T05:34:29.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T05:33:17.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\EmailService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\EmailService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T03:53:48.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CouponsController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\CouponsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CouponsController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\CouponsController.cs",
+              "RelativeToolTip": "API\\Controllers\\CouponsController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAiwCAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T22:54:08.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowEcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T21:45:58.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "API\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T16:22:57.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "API\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwHgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T21:31:09.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\AdminService.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\Infrastructure\\Services\\AdminService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\AdminService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowCkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T17:39:18.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "API\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAPwAAAAAAAAAAADwvwoBAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T18:12:56.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "InventoryController.cs",
+              "DocumentMoniker": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\InventoryController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\InventoryController.cs",
+              "ToolTip": "C:\\Users\\padag\\Desktop\\HCL .NET Training\\Full Stack Projects\\HCL Hackthon\\Retail-Ordering-Website\\Backend\\Retail_booking\\API\\Controllers\\InventoryController.cs",
+              "RelativeToolTip": "API\\Controllers\\InventoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T19:19:39.309Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

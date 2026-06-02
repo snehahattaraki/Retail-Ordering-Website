@@ -1,0 +1,92 @@
+<section class="container py-5">
+  <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 mb-4">
+    <div>
+      <h2 class="mb-1"><i class="bi bi-bag-check me-2 text-primary"></i>My Orders</h2>
+      <p class="text-muted mb-0">Track your recent deliveries, view details, and easily reorder your favorites.</p>
+    </div>
+    <a routerLink="/products" class="btn btn-primary shadow-sm">
+      <i class="bi bi-cart-plus me-1"></i>Start New Order
+    </a>
+  </div>
+
+  <div class="row g-3 mb-4">
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100 bg-light">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h6 class="text-uppercase text-muted mb-0">Total Orders</h6>
+            <i class="bi bi-box-seam text-primary fs-5"></i>
+          </div>
+          <h3 class="fw-semibold mb-0">{{ totalOrders }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100 bg-light">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h6 class="text-uppercase text-muted mb-0">Total Spent</h6>
+            <i class="bi bi-wallet2 text-success fs-5"></i>
+          </div>
+          <h3 class="fw-semibold mb-0">₹{{ totalSpent | number:'1.2-2' }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow-sm border-0 h-100 bg-light">
+        <div class="card-body">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <h6 class="text-uppercase text-muted mb-0">Latest Order</h6>
+            <i class="bi bi-clock-history text-warning fs-5"></i>
+          </div>
+          <p class="fw-medium mb-0 fs-5">{{ latestOrder ? '#' + latestOrder.id : 'No orders yet' }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow-sm border-0">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="table-light">
+          <tr>
+            <th class="ps-4">Order Details</th>
+            <th>Status</th>
+            <th>Total</th>
+            <th class="text-end pe-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td class="ps-4 py-3">
+              <a [routerLink]="['/orders', order.id]" class="fw-bold text-dark text-decoration-none d-block mb-1">
+                Order #{{ order.id }}
+              </a>
+              <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>{{ order.createdAt | date:'mediumDate' }}</span>
+            </td>
+            <td>
+              <span class="px-3 py-2 rounded-pill small fw-medium" [class]="getStatusClass(order.status)">
+                {{ order.status }}
+              </span>
+            </td>
+            <td class="fw-medium">₹{{ order.totalAmount | number:'1.2-2' }}</td>
+            <td class="text-end pe-4">
+              <button class="btn btn-sm btn-outline-success me-2 fw-medium" (click)="reorder(order)">
+                <i class="bi bi-arrow-repeat me-1"></i>Reorder
+              </button>
+              <a [routerLink]="['/orders', order.id]" class="btn btn-sm btn-light border fw-medium">
+                View Details
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div *ngIf="orders.length === 0" class="text-center py-5">
+        <i class="bi bi-cart-x text-muted display-4 mb-3"></i>
+        <h5 class="text-muted">You haven't placed any orders yet.</h5>
+        <a routerLink="/products" class="btn btn-primary mt-3">Browse Menu</a>
+      </div>
+    </div>
+  </div>
+</section>

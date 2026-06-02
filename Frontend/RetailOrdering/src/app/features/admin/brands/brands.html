@@ -1,0 +1,28 @@
+<div class="row g-4">
+  <div class="col-xl-7">
+    <div class="card shadow-sm border-0">
+      <div class="card-header bg-white border-bottom"><h6 class="mb-0">Active Brands</h6></div>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light"><tr><th>ID</th><th>Brand Name</th><th class="text-end">Actions</th></tr></thead>
+          <tbody>
+            <tr *ngFor="let b of brands()">
+              <td class="text-muted">#{{ b.id }}</td>
+              <td class="fw-medium">{{ b.name }}</td>
+              <td class="text-end"><button class="btn btn-sm btn-outline-danger" (click)="deleteBrand(b.id)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-5">
+    <div class="card shadow-sm border-0 p-4">
+      <h6>Add New Brand</h6>
+      <form [formGroup]="form" (ngSubmit)="saveBrand()">
+        <div class="mb-3"><input class="form-control" formControlName="name" placeholder="Brand Name" /></div>
+        <button type="submit" class="btn btn-primary">Save Brand</button>
+      </form>
+    </div>
+  </div>
+</div>

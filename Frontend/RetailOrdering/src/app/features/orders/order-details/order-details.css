@@ -1,0 +1,60 @@
+/* Typography & Alignments */
+.fw-black {
+  font-weight: 900;
+}
+
+.tracking-wider {
+  letter-spacing: 1px;
+}
+
+/* Custom Table Overrides */
+.custom-table th {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.custom-table td {
+  border-bottom: 1px solid #f8f9fa;
+}
+
+/* Print Media Query Configurations */
+@media print {
+  /* Hide navigation, buttons, and backgrounds */
+  .no-print, nav, footer, .navbar, .offcanvas {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white !important;
+  }
+  
+  .print-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+  
+  .card-header {
+    background-color: transparent !important;
+    border-bottom: 2px solid #000 !important;
+    padding-left: 0 !important;
+  }
+  
+  /* Force tables to show borders in print */
+  .table-light th {
+    background-color: #f8f9fa !important;
+    -webkit-print-color-adjust: exact; 
+  }
+  
+  .bg-light {
+    background-color: transparent !important;
+    border: 1px solid #dee2e6 !important;
+  }
+}

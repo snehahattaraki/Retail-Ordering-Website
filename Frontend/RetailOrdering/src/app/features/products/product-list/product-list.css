@@ -1,0 +1,107 @@
+/* Card Hover Effects */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Image Formatting */
+.img-wrapper {
+  height: 220px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.card-img-top.object-fit-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Typography Enhancements */
+.tracking-wide {
+  letter-spacing: 1px;
+}
+
+/* Filter Input Styling */
+.search-group .form-control:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+
+.search-group .input-group-text {
+  border-color: #dee2e6;
+}
+
+.search-group:focus-within .input-group-text,
+.search-group:focus-within .form-control {
+  border-color: #0d6efd; /* Primary color */
+}
+
+/* Custom Pagination Styling */
+.custom-pagination .page-link {
+  border: none;
+  margin: 0 4px;
+  border-radius: 8px !important;
+  color: #495057;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.tracking-wider {
+  letter-spacing: 1px;
+}
+
+.fw-black {
+  font-weight: 800;
+}
+
+.hover-primary:hover {
+  color: #0d6efd !important;
+}
+
+.custom-table th {
+  font-weight: 600;
+  border-bottom: 2px solid #e9ecef;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.custom-table td {
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.bg-success-subtle { background-color: #d1e7dd !important; }
+.bg-warning-subtle { background-color: #fff3cd !important; }
+.bg-danger-subtle { background-color: #f8d7da !important; }
+
+/* Filter Input Styling */
+.search-group:focus-within .input-group-text,
+.search-group:focus-within .form-control {
+  border-color: #0d6efd; 
+  box-shadow: none;
+}
+
+/* Custom Pagination Styling */
+.custom-pagination .page-link {
+  border: none;
+  margin: 0 4px;
+  border-radius: 8px !important;
+  color: #495057;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: #212529; /* Dark theme pagination */
+  color: white;
+}

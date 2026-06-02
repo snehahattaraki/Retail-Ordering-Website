@@ -1,0 +1,73 @@
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Application.DTOs.Category;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.Domain.Entities;
+using RetailOrdering.API.Responses;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class CategoriesController : ControllerBase
+{
+    private readonly AppDbContext _context;
+    private readonly IMapper _mapper;
+
+    public CategoriesController(AppDbContext context, IMapper mapper)
+    {
+        _context = context;
+        _mapper = mapper;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var categories = await _context.Categories.ToListAsync();
+        var dtos = _mapper.Map<IEnumerable<CategoryDto>>(categories);
+        return Ok(ApiResponse<IEnumerable<CategoryDto>>.SuccessResponse(dtos));
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var category = await _context.Categories.FindAsync(id);
+        if (category == null) return NotFound(ApiResponse<string>.FailResponse("Category not found"));
+        return Ok(ApiResponse<CategoryDto>.SuccessResponse(_mapper.Map<CategoryDto>(category)));
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost]
+    public async Task<IActionResult> Create(CreateCategoryDto dto)
+    {
+        var category = new Category { Name = dto.Name };
+        await _context.Categories.AddAsync(category);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetById), new { id = category.Id }, ApiResponse<CategoryDto>.SuccessResponse(_mapper.Map<CategoryDto>(category), "Created"));
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, CreateCategoryDto dto)
+    {
+        var category = await _context.Categories.FindAsync(id);
+        if (category == null) return NotFound(ApiResponse<string>.FailResponse("Category not found"));
+        category.Name = dto.Name;
+        _context.Categories.Update(category);
+        await _context.SaveChangesAsync();
+        return Ok(ApiResponse<string>.SuccessResponse(null, "Updated"));
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var category = await _context.Categories.FindAsync(id);
+        if (category == null) return NotFound(ApiResponse<string>.FailResponse("Category not found"));
+        _context.Categories.Remove(category);
+        await _context.SaveChangesAsync();
+        return Ok(ApiResponse<string>.SuccessResponse(null, "Deleted"));
+    }
+}

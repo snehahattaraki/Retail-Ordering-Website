@@ -1,0 +1,157 @@
+<div class="d-flex" style="min-height: 100vh; background-color: #f8f9fa;">
+  
+  <div class="d-none d-md-flex flex-column flex-shrink-0 p-3 text-white bg-dark shadow" style="width: 280px; z-index: 1000;">
+    <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none px-2">
+      <i class="bi bi-shop fs-3 me-3 text-primary"></i>
+      <span class="fs-5 fw-bold tracking-wide">Retail Admin</span>
+    </div>
+    <div class="px-2 mt-1 mb-3 text-muted small text-uppercase">
+      Access Level: <span class="badge bg-secondary ms-1">{{ userRole }}</span>
+    </div>
+    
+    <hr class="border-secondary opacity-50">
+    
+    <ul class="nav nav-pills flex-column mb-auto gap-1">
+      
+      <li class="nav-item" *ngIf="userRole === 'Admin' || userRole === 'Management'">
+        <a routerLink="/admin" routerLinkActive="active bg-primary" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-white px-3 py-2 rounded-3">
+          <i class="bi bi-speedometer2 me-3"></i> Dashboard
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/admin/orders" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+          <i class="bi bi-receipt me-3"></i> Orders
+        </a>
+      </li>
+
+      <ng-container *ngIf="userRole === 'Admin' || userRole === 'Management'">
+        <li>
+          <a routerLink="/admin/products" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-box-seam me-3"></i> Products
+          </a>
+        </li>
+        <li>
+          <a routerLink="/admin/inventory" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-clipboard-data me-3"></i> Stock / Inventory
+          </a>
+        </li>
+        <li>
+          <a routerLink="/admin/categories" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-tags me-3"></i> Categories
+          </a>
+        </li>
+        <li>
+          <a routerLink="/admin/brands" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-building me-3"></i> Brands
+          </a>
+        </li>
+      </ng-container>
+
+      <li *ngIf="userRole === 'Admin'">
+        <a routerLink="/admin/users" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+          <i class="bi bi-people me-3"></i> User Roles
+        </a>
+      </li>
+    </ul>
+
+    <hr class="border-secondary opacity-50">
+    
+    <div class="dropdown">
+      <button class="btn btn-outline-light border-0 w-100 d-flex align-items-center justify-content-between p-2 rounded" (click)="logout()">
+        <div class="d-flex align-items-center">
+          <i class="bi bi-person-circle fs-5 me-2"></i>
+          <span>Sign Out</span>
+        </div>
+        <i class="bi bi-box-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex-grow-1 overflow-auto d-flex flex-column">
+    
+    <header class="bg-white shadow-sm py-3 px-3 px-md-4 d-flex justify-content-between align-items-center border-bottom">
+      
+      <div class="d-flex align-items-center">
+        <button class="btn btn-light d-md-none me-3 border" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+          <i class="bi bi-list fs-5"></i>
+        </button>
+        <h5 class="mb-0 text-muted fw-medium d-none d-sm-block">Enterprise Management Portal</h5>
+        <h5 class="mb-0 text-muted fw-medium d-block d-sm-none">Portal</h5>
+      </div>
+      
+      <div class="d-flex align-items-center gap-3">
+        <span class="badge bg-light text-dark border d-md-none">{{ userRole }}</span>
+        <a routerLink="/" class="btn btn-sm btn-light border"><i class="bi bi-globe me-2 d-none d-sm-inline"></i>Storefront</a>
+      </div>
+    </header>
+    
+    <main class="p-3 p-md-4 flex-grow-1">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileSidebar" style="width: 280px;">
+  <div class="offcanvas-header border-bottom border-secondary opacity-75">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-shop fs-3 me-3 text-primary"></i>
+      <span class="fs-5 fw-bold tracking-wide">Retail Admin</span>
+    </div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column p-3">
+    <div class="px-2 mt-1 mb-3 text-muted small text-uppercase">
+      Access Level: <span class="badge bg-secondary ms-1">{{ userRole }}</span>
+    </div>
+    
+    <ul class="nav nav-pills flex-column mb-auto gap-1">
+      <li class="nav-item" *ngIf="userRole === 'Admin' || userRole === 'Management'" data-bs-dismiss="offcanvas">
+        <a routerLink="/admin" routerLinkActive="active bg-primary" [routerLinkActiveOptions]="{exact: true}" class="nav-link text-white px-3 py-2 rounded-3">
+          <i class="bi bi-speedometer2 me-3"></i> Dashboard
+        </a>
+      </li>
+      <li data-bs-dismiss="offcanvas">
+        <a routerLink="/admin/orders" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+          <i class="bi bi-receipt me-3"></i> Orders
+        </a>
+      </li>
+      <ng-container *ngIf="userRole === 'Admin' || userRole === 'Management'">
+        <li data-bs-dismiss="offcanvas">
+          <a routerLink="/admin/products" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-box-seam me-3"></i> Products
+          </a>
+        </li>
+        <li data-bs-dismiss="offcanvas">
+          <a routerLink="/admin/inventory" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-clipboard-data me-3"></i> Stock / Inventory
+          </a>
+        </li>
+        <li data-bs-dismiss="offcanvas">
+          <a routerLink="/admin/categories" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-tags me-3"></i> Categories
+          </a>
+        </li>
+        <li data-bs-dismiss="offcanvas">
+          <a routerLink="/admin/brands" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+            <i class="bi bi-building me-3"></i> Brands
+          </a>
+        </li>
+      </ng-container>
+      <li *ngIf="userRole === 'Admin'" data-bs-dismiss="offcanvas">
+        <a routerLink="/admin/users" routerLinkActive="active bg-primary" class="nav-link text-white px-3 py-2 rounded-3">
+          <i class="bi bi-people me-3"></i> User Roles
+        </a>
+      </li>
+    </ul>
+
+    <hr class="border-secondary opacity-50">
+    <button class="btn btn-outline-light border-0 w-100 d-flex align-items-center justify-content-between p-2 rounded" (click)="logout()" data-bs-dismiss="offcanvas">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-person-circle fs-5 me-2"></i>
+        <span>Sign Out</span>
+      </div>
+      <i class="bi bi-box-arrow-right"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+<section class="hero-section text-white py-5 position-relative overflow-hidden">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 hero-content">
+        <span class="badge bg-white text-primary rounded-pill px-3 py-2 fw-bold text-uppercase tracking-wider mb-3 shadow-sm animate-fade-in">
+          ✨ Premium Food Delivery
+        </span>
+        <h1 class="display-4 fw-black tracking-tight mb-3">Delicious meals <br><span class="text-warning">delivered fast.</span></h1>
+        <p class="lead text-white-75 mb-4 pe-lg-4">Order from your favorite kitchens, track your items live, and enjoy an enterprise-grade checkout experience.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a routerLink="/products" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold shadow-sm d-flex align-items-center">
+            Browse Menu <i class="bi bi-arrow-right ms-2 fs-5"></i>
+          </a>
+          <a routerLink="/cart" class="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-medium">
+            <i class="bi bi-cart3 me-2"></i> View Cart
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center position-relative animate-slide-up">
+        <div class="hero-image-wrapper p-2 bg-white-10 rounded-4 shadow-lg backdrop-blur">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80" alt="Gourmet Dish" class="img-fluid rounded-4 object-fit-cover header-img shadow-inner" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <div class="row justify-content-between align-items-center mb-5 g-4">
+    <div class="col-md-6 col-lg-7">
+      <h2 class="fw-bold text-dark tracking-tight mb-1">Find your next meal</h2>
+      <p class="text-muted mb-0">Select a category below or use search to find popular dishes.</p>
+    </div>
+    <div class="col-md-6 col-lg-5">
+      <div class="input-group input-group-lg search-group shadow-sm border rounded-4 bg-white overflow-hidden">
+        <span class="input-group-text bg-transparent border-0 pe-1"><i class="bi bi-search text-muted"></i></span>
+        <input class="form-control border-0 ps-2" [(ngModel)]="search" placeholder="Search menu items..." />
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="d-flex flex-wrap gap-2 pb-2">
+      <button class="btn category-pill rounded-pill px-4 py-2 fw-medium border shadow-sm transition-all" 
+              [class.btn-primary]="selectedCategory === '' || selectedCategory === null"
+              [class.btn-light]="selectedCategory !== '' && selectedCategory !== null"
+              type="button" 
+              (click)="selectedCategory = ''">
+        All Items
+      </button>
+      
+      <button *ngFor="let category of categories"
+              class="btn category-pill rounded-pill px-4 py-2 fw-medium border shadow-sm transition-all" 
+              [class.btn-primary]="selectedCategory === category.id"
+              [class.btn-light]="selectedCategory !== category.id"
+              type="button" 
+              (click)="selectedCategory = category.id">
+        {{ category.name }}
+      </button>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-between align-items-end mb-4 border-bottom pb-3">
+    <div>
+      <h3 class="fw-bold text-dark mb-0">Featured Dishes</h3>
+    </div>
+    <div>
+      <a routerLink="/products" class="btn btn-link text-decoration-none fw-bold text-primary d-flex align-items-center p-0">
+        See full menu <i class="bi bi-chevron-right small ms-1"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center py-5 rounded-4 bg-light border border-dashed mb-4" *ngIf="filteredProducts.length === 0">
+    <div class="display-3 text-muted opacity-25 mb-2">
+      <i class="bi bi-egg-fried"></i>
+    </div>
+    <h5 class="fw-bold text-dark">No featured dishes found</h5>
+    <p class="text-muted mb-0">Try clearing your search or picking a different food category section above.</p>
+    <button class="btn btn-sm btn-outline-primary mt-3 rounded-pill px-3" (click)="search = ''; selectedCategory = ''">Reset Feed</button>
+  </div>
+
+  <div class="card shadow-sm border-0 rounded-4 overflow-hidden mb-4" *ngIf="filteredProducts.length > 0">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle mb-0 custom-table bg-white">
+        <thead class="table-light text-muted small text-uppercase tracking-wider">
+          <tr>
+            <th class="ps-4">Featured Dish</th>
+            <th>Category</th>
+            <th>Brand</th>
+            <th class="text-end">Price</th>
+            <th class="text-end pe-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of filteredProducts">
+            <td class="ps-4 py-3">
+              <div class="d-flex align-items-center gap-3">
+                <img [src]="product.imageUrl || 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=100&q=80'" 
+                     class="rounded-3 object-fit-cover border shadow-sm" width="48" height="48" alt="{{ product.name }}" />
+                <a [routerLink]="['/products', product.id]" class="fw-bold text-dark text-decoration-none hover-primary mb-0 d-block">{{ product.name }}</a>
+              </div>
+            </td>
+            <td>
+              <span class="badge bg-light text-secondary border">{{ product.categoryName || 'General' }}</span>
+            </td>
+            <td class="fw-medium text-muted">
+              {{ getBrandName($any(product).brandId) }}
+            </td>
+            <td class="text-end fw-black text-dark fs-6">
+              ₹{{ product.price | number:'1.2-2' }}
+            </td>
+            <td class="text-end pe-4">
+              <div class="d-flex justify-content-end gap-2">
+                <button class="btn btn-sm btn-primary fw-medium px-3" 
+                        [disabled]="product.stockQty === 0" (click)="addToCart(product)">
+                  <i class="bi bi-plus"></i> Add
+                </button>
+                <a [routerLink]="['/products', product.id]" class="btn btn-sm btn-outline-secondary px-3">
+                  Details
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="container py-4 mb-4">
+  <div class="promo-banner-card p-4 p-md-5 rounded-4 shadow-sm position-relative overflow-hidden text-white border-0">
+    <div class="position-absolute top-0 end-0 opacity-10 pointer-events-none d-none d-md-block" style="transform: scale(1.5) translate(-10%, 10%); font-size: 10rem;">
+      <i class="bi bi-tags-fill"></i>
+    </div>
+    <div class="row align-items-center g-4 position-relative">
+      <div class="col-md-8 col-lg-9">
+        <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill text-uppercase tracking-wider mb-2">Weekly Offer</span>
+        <h3 class="fw-black mb-2 display-6 tracking-tight">Special offers loaded every week</h3>
+        <p class="mb-0 text-white-75 lead fs-6 max-w-xl">Save time and money with special bundle deals and smart, personalized recommendations built to expedite checkouts.</p>
+      </div>
+      <div class="col-md-4 col-lg-3 text-md-end">
+        <a routerLink="/products" class="btn btn-light btn-lg rounded-pill px-4 py-3 fw-bold text-primary shadow-sm hover-grow w-100 w-md-auto">
+          Explore Offers <i class="bi bi-percent ms-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

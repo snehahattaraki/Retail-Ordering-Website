@@ -1,0 +1,84 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.API.Responses;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+[Authorize(Roles = "Admin")]
+public class AdminController : ControllerBase
+{
+    private readonly AppDbContext _context;
+
+    public AdminController(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    [HttpGet("dashboard")]
+    public async Task<IActionResult> Dashboard()
+    {
+        var totalUsers = await _context.Users.CountAsync();
+        var totalProducts = await _context.Products.CountAsync();
+        var totalOrders = await _context.Orders.CountAsync();
+        var totalRevenue = await _context.Orders.SumAsync(o => o.TotalAmount);
+
+        var dashboardData = new
+        {
+            totalUsers,
+            totalProducts,
+            totalOrders,
+            totalRevenue,
+            lowStockProducts = await _context.Products.Where(p => p.StockQty < 10).CountAsync()
+        };
+
+        return Ok(ApiResponse<object>.SuccessResponse(dashboardData));
+    }
+
+    [HttpGet("products/low-stock")]
+    public async Task<IActionResult> LowStockProducts()
+    {
+        var products = await _context.Products
+            .Where(p => p.StockQty < 10)
+            .Select(p => new { p.Id, p.Name, p.StockQty })
+            .ToListAsync();
+
+        return Ok(ApiResponse<IEnumerable<object>>.SuccessResponse(products));
+    }
+
+    [HttpGet("orders/status")]
+    public async Task<IActionResult> OrdersByStatus()
+    {
+        var ordersByStatus = await _context.Orders
+            .GroupBy(o => o.Status)
+            .Select(g => new { status = g.Key.ToString(), count = g.Count() })
+            .ToListAsync();
+
+        return Ok(ApiResponse<IEnumerable<object>>.SuccessResponse(ordersByStatus));
+    }
+
+    [HttpPut("orders/{id}/status")]
+    public async Task<IActionResult> UpdateOrderStatus(int id, [FromBody] UpdateOrderStatusDto dto)
+    {
+        var order = await _context.Orders.FindAsync(id);
+        if (order == null) return NotFound(ApiResponse<string>.FailResponse("Order not found"));
+
+        if (Enum.TryParse<RetailOrdering.Domain.Entities.OrderStatus>(dto.Status, out var status))
+        {
+            order.Status = status;
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+            return Ok(ApiResponse<string>.SuccessResponse(null, "Order status updated"));
+        }
+
+        return BadRequest(ApiResponse<string>.FailResponse("Invalid status"));
+    }
+}
+
+public class UpdateOrderStatusDto
+{
+    public string Status { get; set; } = null!;
+}

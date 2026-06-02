@@ -1,0 +1,145 @@
+﻿using System.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using RetailOrdering.Application.Interfaces;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.Infrastructure.Repositories;
+using RetailOrdering.Infrastructure.Interfaces;
+using RetailOrdering.Infrastructure.Services;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using RetailOrdering.API.Middleware;
+using Serilog;
+
+var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+
+// Serilog
+Log.Logger = new LoggerConfiguration().ReadFrom.Configuration(configuration).Enrich.FromLogContext().CreateLogger();
+builder.Host.UseSerilog();
+
+// Database Connection Handling configured explicitly for SQLEXPRESS
+var connectionString = configuration.GetConnectionString("DefaultConnection")
+    ?? "Server=(local)\\SQLEXPRESS;Database=retail_ordering_db;Trusted_Connection=True;TrustServerCertificate=True;";
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(connectionString, sqlOptions =>
+        sqlOptions.EnableRetryOnFailure(
+            maxRetryCount: 5,
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null
+        )));
+
+// System Component Registrations
+builder.Services.AddAutoMapper(typeof(RetailOrdering.Application.Mapping.AutoMapperProfile));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+builder.Services.AddControllers().AddFluentValidation();
+
+// register validators
+builder.Services.AddValidatorsFromAssemblyContaining<RetailOrdering.Application.Validators.Auth.RegisterValidator>();
+
+// ============================================================================
+// ANGULAR CORS CONFIGURATION
+// ============================================================================
+// 1. Define a name for your CORS policy
+var myAngularPolicy = "_myAngularPolicy";
+
+// 2. Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: myAngularPolicy,
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200") // Angular default port
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials(); // Required if you use cookies/identity sessions
+        });
+});
+
+builder.Services.AddHealthChecks();
+
+// Identity / JWT Security Architecture (Updated fallback key to >32 characters for security compliance)
+var jwtKey = configuration["Jwt:Key"] ?? "ChangeThis_SecretKey1234567890_ExtraLengthFor256Bits";
+var key = Encoding.ASCII.GetBytes(jwtKey);
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "JwtBearer";
+    options.DefaultChallengeScheme = "JwtBearer";
+})
+.AddJwtBearer("JwtBearer", options =>
+{
+    options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateLifetime = true,
+        RoleClaimType = System.Security.Claims.ClaimTypes.Role
+    };
+});
+
+n// register application services - keep existing registrations and add new ones
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IInventoryService, InventoryService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+
+builder.Services.AddAuthorization();
+
+// OpenAPI/Swagger API UI Engine Configuration
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "RetailOrdering API", Version = "v1" });
+    var securityScheme = new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "JWT Authorization header using the Bearer scheme.",
+    };
+    c.AddSecurityDefinition("Bearer", securityScheme);
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement { { securityScheme, new string[] { } } });
+});
+
+var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RetailOrdering API v1"));
+}
+
+app.UseMiddleware<RetailOrdering.API.Middleware.ExceptionMiddleware>();
+
+app.UseHttpsRedirection();
+
+// ============================================================================
+// APPLY CORS MIDDLEWARE 
+// ============================================================================
+// CRITICAL: UseCors MUST be placed after UseRouting (implicit here) and BEFORE UseAuthentication/UseAuthorization
+app.UseRouting();
+app.UseCors(myAngularPolicy);
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapHealthChecks("/health");
+app.MapGet("/", () => new { success = true, message = "API running" });
+app.MapControllers();
+
+app.Run();

@@ -1,0 +1,106 @@
+<section class="container py-5" *ngIf="product && !isLoading; else loading">
+  
+  <div class="mb-4">
+    <a routerLink="/products" class="btn btn-sm btn-light border text-decoration-none">
+      <i class="bi bi-arrow-left me-1"></i>Back to Catalog
+    </a>
+  </div>
+
+  <div class="row gy-5">
+    <div class="col-lg-5">
+      <div class="card border-0 rounded-4 overflow-hidden shadow-sm sticky-top" style="top: 2rem;">
+        <img [src]="product.imageUrl || 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80'" 
+             class="img-fluid w-100 object-fit-cover" style="height: 400px;" alt="{{ product.name }}" />
+      </div>
+    </div>
+    
+    <div class="col-lg-7">
+      <div class="d-flex align-items-center gap-3 mb-2">
+        <span class="badge bg-primary text-uppercase tracking-wider">{{ product.categoryName || 'General' }}</span>
+        <span class="badge bg-light border text-dark"><i class="bi bi-upc-scan me-1"></i> SKU-{{ product.id | number:'4.0-0' }}</span>
+      </div>
+      
+      <h1 class="display-5 fw-bold mb-3">{{ product.name }}</h1>
+      <p class="lead text-muted mb-4">{{ product.description || 'A premium quality item guaranteed to meet your high standards and expectations.' }}</p>
+      
+      <div class="d-flex align-items-center mb-4">
+        <h2 class="fw-black text-dark mb-0 me-3">₹{{ product.price | number:'1.2-2' }}</h2>
+        <span class="text-muted small">/ unit (Incl. taxes)</span>
+      </div>
+
+      <h5 class="fw-bold mb-3 border-bottom pb-2">Product Specifications</h5>
+      <div class="table-responsive mb-5">
+        <table class="table table-bordered table-striped table-sm align-middle spec-table">
+          <tbody>
+            <tr>
+              <th class="bg-light text-muted w-35 ps-3 py-2">Manufacturer / Brand</th>
+              <td class="ps-3 py-2 fw-medium">{{ getBrandName(product.id) }}</td>
+            </tr>
+            <tr>
+              <th class="bg-light text-muted ps-3 py-2">Item Category</th>
+              <td class="ps-3 py-2">{{ product.categoryName || 'Standard' }}</td>
+            </tr>
+            <tr>
+              <th class="bg-light text-muted ps-3 py-2">Stock Availability</th>
+              <td class="ps-3 py-2">
+                <span [class.text-success]="product.stockQty > 5" 
+                      [class.text-warning]="product.stockQty <= 5 && product.stockQty > 0" 
+                      [class.text-danger]="product.stockQty === 0" class="fw-bold">
+                  {{ product.stockQty > 0 ? product.stockQty + ' Units Available (Ready to Ship)' : 'Out of Stock' }}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th class="bg-light text-muted ps-3 py-2">Packaging Format</th>
+              <td class="ps-3 py-2">{{ getPackagingType(product.id) || 'Retail Standard Box' }}</td>
+            </tr>
+            <tr>
+              <th class="bg-light text-muted ps-3 py-2">Shipping Restrictions</th>
+              <td class="ps-3 py-2">None. Eligible for priority overnight dispatch.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card shadow-sm border-0 bg-light rounded-4">
+        <div class="card-body p-4">
+          <form [formGroup]="quantityForm">
+            <div class="row align-items-end g-3">
+              <div class="col-sm-4">
+                <label class="form-label fw-bold small text-uppercase text-muted">Purchase Quantity</label>
+                <input type="number" class="form-control form-control-lg text-center fw-bold" 
+                       formControlName="quantity" min="1" [max]="product.stockQty"
+                       [class.is-invalid]="quantity?.invalid && quantity?.touched" />
+              </div>
+              <div class="col-sm-8">
+                <button class="btn btn-primary btn-lg w-100 fw-bold shadow-sm d-flex align-items-center justify-content-center" 
+                        [disabled]="product.stockQty === 0 || quantityForm.invalid || isLoading"
+                        (click)="addToCart()">
+                  <i class="bi bi-cart-plus fs-5 me-2"></i> Add to Order Manifest
+                </button>
+              </div>
+            </div>
+            
+            <div class="text-danger small mt-2" *ngIf="quantity?.invalid && quantity?.touched">
+              <span *ngIf="quantity?.hasError('required')"><i class="bi bi-exclamation-triangle me-1"></i> Quantity is required.</span>
+              <span *ngIf="quantity?.hasError('min')"><i class="bi bi-exclamation-triangle me-1"></i> Minimum order is 1.</span>
+              <span *ngIf="quantity?.hasError('max')"><i class="bi bi-exclamation-triangle me-1"></i> Exceeds available warehouse stock.</span>
+            </div>
+          </form>
+
+          <div class="alert alert-danger mt-3 mb-0" *ngIf="error" role="alert">
+            <i class="bi bi-x-circle me-2"></i> {{ error }}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<ng-template #loading>
+  <div class="container py-5 text-center text-muted">
+    <div class="spinner-border text-primary mb-3" role="status"></div>
+    <h5>Retrieving Product Blueprint...</h5>
+  </div>
+</ng-template>

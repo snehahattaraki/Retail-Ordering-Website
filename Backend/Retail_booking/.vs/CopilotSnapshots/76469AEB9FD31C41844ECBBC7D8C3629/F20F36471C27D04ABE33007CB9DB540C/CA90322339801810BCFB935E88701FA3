@@ -1,0 +1,95 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.Domain.Entities;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+[Authorize]
+public class CartController : ControllerBase
+{
+    private readonly AppDbContext _context;
+
+    public CartController(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    private int GetUserId() => int.Parse(User.Claims.First(c => c.Type == System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+
+    [HttpPost("add")]
+    public async Task<IActionResult> Add([FromBody] CartItem item)
+    {
+        var userId = GetUserId();
+        var cart = await _context.Carts.Include(c => c.CartItems).FirstOrDefaultAsync(c => c.UserId == userId);
+        if (cart == null)
+        {
+            cart = new Cart { UserId = userId };
+            await _context.Carts.AddAsync(cart);
+            await _context.SaveChangesAsync();
+        }
+
+        var product = await _context.Products.FindAsync(item.ProductId);
+        if (product == null) return NotFound(new { message = "Product not found" });
+        if (product.StockQty < item.Quantity) return BadRequest(new { message = "Not enough stock" });
+
+        var existing = cart.CartItems.FirstOrDefault(ci => ci.ProductId == item.ProductId);
+        if (existing != null)
+        {
+            existing.Quantity += item.Quantity;
+            _context.CartItems.Update(existing);
+        }
+        else
+        {
+            item.CartId = cart.Id;
+            await _context.CartItems.AddAsync(item);
+        }
+
+        await _context.SaveChangesAsync();
+        return Ok();
+    }
+
+    [HttpPut("update")]
+    public async Task<IActionResult> Update([FromBody] CartItem item)
+    {
+        var userId = GetUserId();
+        var cart = await _context.Carts.Include(c => c.CartItems).FirstOrDefaultAsync(c => c.UserId == userId);
+        if (cart == null) return NotFound();
+
+        var existing = await _context.CartItems.FindAsync(item.Id);
+        if (existing == null) return NotFound();
+        var product = await _context.Products.FindAsync(existing.ProductId);
+        if (product == null) return NotFound();
+        if (product.StockQty < item.Quantity) return BadRequest(new { message = "Not enough stock" });
+
+        existing.Quantity = item.Quantity;
+        _context.CartItems.Update(existing);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
+
+    [HttpDelete("remove")]
+    public async Task<IActionResult> Remove([FromQuery] int id)
+    {
+        var userId = GetUserId();
+        var cart = await _context.Carts.Include(c => c.CartItems).FirstOrDefaultAsync(c => c.UserId == userId);
+        if (cart == null) return NotFound();
+        var existing = await _context.CartItems.FindAsync(id);
+        if (existing == null) return NotFound();
+        _context.CartItems.Remove(existing);
+        await _context.SaveChangesAsync();
+        return NoContent();
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get()
+    {
+        var userId = GetUserId();
+        var cart = await _context.Carts.Include(c => c.CartItems).ThenInclude(ci => ci.Product).FirstOrDefaultAsync(c => c.UserId == userId);
+        if (cart == null) return Ok(new { items = new object[0] });
+        return Ok(cart);
+    }
+}

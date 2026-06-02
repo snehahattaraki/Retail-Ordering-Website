@@ -1,0 +1,320 @@
+﻿using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using RetailOrdering.Infrastructure.Data;
+using RetailOrdering.Domain.Entities;
+using RetailOrdering.Application.Interfaces;
+using RetailOrdering.API.Responses;
+using RetailOrdering.Application.DTOs.Order;
+
+namespace RetailOrdering.API.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+[Authorize]
+public class OrdersController : ControllerBase
+{
+    private readonly AppDbContext _context;
+    private readonly IEmailService _emailService;
+
+    public OrdersController(AppDbContext context, IEmailService emailService)
+    {
+        _context = context;
+        _emailService = emailService;
+    }
+
+    private int GetUserId()
+    {
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (!int.TryParse(userIdClaim, out var userId))
+            throw new UnauthorizedAccessException("Invalid user ID in token");
+        return userId;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetUserOrders()
+    {
+        try
+        {
+            Console.WriteLine($"AUTH HEADER: {Request.Headers["Authorization"]}");
+            Console.WriteLine($"USER AUTHENTICATED: {User.Identity?.IsAuthenticated}");
+            Console.WriteLine($"USER ROLE: {User.FindFirst(ClaimTypes.Role)?.Value}");
+
+            var userId = GetUserId();
+            var orders = await _context.Orders
+                .Where(o => o.UserId == userId)
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .OrderByDescending(o => o.CreatedAt)
+                .ToListAsync();
+
+            return Ok(ApiResponse<object>.SuccessResponse(orders, "User orders retrieved"));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(ApiResponse<string>.FailResponse(ex.Message));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in GetUserOrders: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetOrderById(int id)
+    {
+        try
+        {
+            var userId = GetUserId();
+            var order = await _context.Orders
+                .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+                .FirstOrDefaultAsync(o => o.Id == id && o.UserId == userId);
+
+            if (order == null)
+                return NotFound(ApiResponse<string>.FailResponse("Order not found"));
+
+            return Ok(ApiResponse<object>.SuccessResponse(order, "Order retrieved"));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(ApiResponse<string>.FailResponse(ex.Message));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in GetOrderById: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [HttpGet("{id}/items")]
+    public async Task<IActionResult> GetOrderItems(int id)
+    {
+        try
+        {
+            var userId = GetUserId();
+            var orderItems = await _context.OrderItems
+                .Where(oi => oi.Order.UserId == userId && oi.OrderId == id)
+                .Include(oi => oi.Product)
+                .ToListAsync();
+
+            if (!orderItems.Any())
+                return NotFound(ApiResponse<string>.FailResponse("Order items not found"));
+
+            return Ok(ApiResponse<object>.SuccessResponse(orderItems, "Order items retrieved"));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(ApiResponse<string>.FailResponse(ex.Message));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in GetOrderItems: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [HttpPost("place")]
+    public async Task<IActionResult> PlaceOrder([FromBody] PlaceOrderDto dto)
+    {
+        try
+        {
+            Console.WriteLine($"AUTH HEADER: {Request.Headers["Authorization"]}");
+            Console.WriteLine($"USER AUTHENTICATED: {User.Identity?.IsAuthenticated}");
+            Console.WriteLine($"USER ROLE: {User.FindFirst(ClaimTypes.Role)?.Value}");
+
+            if (dto == null || dto.Items == null || !dto.Items.Any())
+                return BadRequest(ApiResponse<string>.FailResponse("No items provided"));
+
+            var userId = GetUserId();
+
+            // Verify stock for all items
+            foreach (var item in dto.Items)
+            {
+                var product = await _context.Products.FindAsync(item.ProductId);
+                if (product == null)
+                    return NotFound(ApiResponse<string>.FailResponse($"Product {item.ProductId} not found"));
+
+                if (product.StockQty < item.Quantity)
+                    return BadRequest(ApiResponse<string>.FailResponse($"Insufficient stock for {product.Name}"));
+            }
+
+            // Create order
+            var order = new Order
+            {
+                UserId = userId,
+                TotalAmount = 0m,
+                Status = OrderStatus.Pending,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            await _context.Orders.AddAsync(order);
+            await _context.SaveChangesAsync();
+
+            // Add order items and update product stock
+            decimal totalAmount = 0m;
+            foreach (var item in dto.Items)
+            {
+                var product = await _context.Products.FindAsync(item.ProductId);
+                var orderItem = new OrderItem
+                {
+                    OrderId = order.Id,
+                    ProductId = item.ProductId,
+                    Quantity = item.Quantity,
+                    Price = product.Price
+                };
+
+                await _context.OrderItems.AddAsync(orderItem);
+                totalAmount += orderItem.Price * orderItem.Quantity;
+
+                // Update stock
+                product.StockQty -= item.Quantity;
+                _context.Products.Update(product);
+            }
+
+            // Update order total and status
+            order.TotalAmount = totalAmount;
+            order.Status = OrderStatus.Confirmed;
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+
+            // Send confirmation email
+            var user = await _context.Users.FindAsync(userId);
+            if (user != null)
+            {
+                try
+                {
+                    await _emailService.SendEmailAsync(
+                        user.Email,
+                        "Order Confirmation",
+                        $"Your order #{order.Id} has been placed successfully. Total: ${totalAmount:F2}"
+                    );
+                }
+                catch (Exception emailEx)
+                {
+                    Console.WriteLine($"Email send error: {emailEx.Message}");
+                }
+            }
+
+            return Ok(ApiResponse<object>.SuccessResponse(new { orderId = order.Id, totalAmount = order.TotalAmount }, "Order placed successfully"));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(ApiResponse<string>.FailResponse(ex.Message));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in PlaceOrder: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [HttpPost("{id}/reorder")]
+    public async Task<IActionResult> ReorderItems(int id)
+    {
+        try
+        {
+            var userId = GetUserId();
+            var originalOrder = await _context.Orders
+                .Include(o => o.OrderItems)
+                .FirstOrDefaultAsync(o => o.Id == id && o.UserId == userId);
+
+            if (originalOrder == null)
+                return NotFound(ApiResponse<string>.FailResponse("Original order not found"));
+
+            // Verify stock for all items
+            foreach (var item in originalOrder.OrderItems)
+            {
+                var product = await _context.Products.FindAsync(item.ProductId);
+                if (product == null)
+                    return NotFound(ApiResponse<string>.FailResponse($"Product {item.ProductId} not found"));
+
+                if (product.StockQty < item.Quantity)
+                    return BadRequest(ApiResponse<string>.FailResponse($"Insufficient stock for reorder"));
+            }
+
+            // Create new order
+            var newOrder = new Order
+            {
+                UserId = userId,
+                TotalAmount = 0m,
+                Status = OrderStatus.Pending,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            await _context.Orders.AddAsync(newOrder);
+            await _context.SaveChangesAsync();
+
+            // Copy order items
+            decimal totalAmount = 0m;
+            foreach (var originalItem in originalOrder.OrderItems)
+            {
+                var product = await _context.Products.FindAsync(originalItem.ProductId);
+                var newOrderItem = new OrderItem
+                {
+                    OrderId = newOrder.Id,
+                    ProductId = originalItem.ProductId,
+                    Quantity = originalItem.Quantity,
+                    Price = originalItem.Price
+                };
+
+                await _context.OrderItems.AddAsync(newOrderItem);
+                totalAmount += newOrderItem.Price * newOrderItem.Quantity;
+
+                // Update stock
+                product.StockQty -= originalItem.Quantity;
+                _context.Products.Update(product);
+            }
+
+            // Update order
+            newOrder.TotalAmount = totalAmount;
+            newOrder.Status = OrderStatus.Confirmed;
+            _context.Orders.Update(newOrder);
+            await _context.SaveChangesAsync();
+
+            return Ok(ApiResponse<object>.SuccessResponse(new { orderId = newOrder.Id }, "Reorder placed successfully"));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return Unauthorized(ApiResponse<string>.FailResponse(ex.Message));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in ReorderItems: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateOrderStatus(int id, [FromBody] UpdateOrderStatusDto dto)
+    {
+        try
+        {
+            var order = await _context.Orders.FindAsync(id);
+            if (order == null)
+                return NotFound(ApiResponse<string>.FailResponse("Order not found"));
+
+            if (!Enum.TryParse<OrderStatus>(dto.Status, true, out var newStatus))
+                return BadRequest(ApiResponse<string>.FailResponse("Invalid order status"));
+
+            order.Status = newStatus;
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+
+            return Ok(ApiResponse<string>.SuccessResponse(null, "Order status updated successfully"));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"ERROR in UpdateOrderStatus: {ex.Message}");
+            return StatusCode(500, ApiResponse<string>.FailResponse($"Internal server error: {ex.Message}"));
+        }
+    }
+}
+
+public class UpdateOrderStatusDto
+{
+    public string Status { get; set; } = null!;
+}

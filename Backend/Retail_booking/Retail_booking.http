@@ -1,0 +1,7 @@
+@Retail_booking_HostAddress = http://localhost:5246
+//7215
+
+GET {{Retail_booking_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,83 @@
+<section class="container py-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card shadow-sm border-0 mb-4">
+        <div class="card-body">
+          <h2>Shopping cart</h2>
+          <p class="text-muted">Adjust your order and proceed to checkout with confidence.</p>
+
+          <ng-container *ngIf="(items$ | async) as items; else empty">
+            <div class="table-responsive">
+              <table class="table align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of items">
+                    <td>
+                      <div class="fw-semibold">{{ item.product.name }}</div>
+                      <div class="text-muted small">{{ item.product.categoryName }}</div>
+                    </td>
+                    <td>
+                      <input type="number" class="form-control form-control-sm" [value]="item.quantity" min="1" (change)="updateQuantity(item, $any($event.target).value)" />
+                    </td>
+                    <td>₹{{ item.product.price | number:'1.2-2' }}</td>
+                    <td>₹{{ item.product.price * item.quantity | number:'1.2-2' }}</td>
+                    <td><button class="btn btn-sm btn-outline-danger" (click)="removeItem(item.product.id)">Remove</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card shadow-sm border-0 p-4">
+        <h4 class="mb-3">Order summary</h4>
+        
+        <div class="mb-4">
+          <label class="form-label">Coupon code</label>
+          <div class="input-group">
+            <input class="form-control" placeholder="Enter promo code" [(ngModel)]="couponCode" />
+            <button class="btn btn-dark" (click)="applyCoupon()">Apply</button>
+          </div>
+        </div>
+
+        <div class="mb-2 d-flex justify-content-between">
+          <span>Items</span>
+          <span *ngIf="(totalItems$ | async) as count">{{ count }}</span>
+        </div>
+        <div class="mb-3 d-flex justify-content-between">
+          <span>Subtotal</span>
+          <span *ngIf="(subtotal$ | async) as subtotal">₹{{ subtotal | number:'1.2-2' }}</span>
+        </div>
+        
+        <div class="mb-3 d-flex justify-content-between text-success" *ngIf="discountAmount > 0">
+          <span>Discount</span>
+          <span>-₹{{ discountAmount | number:'1.2-2' }}</span>
+        </div>
+        <hr>
+        <div class="mb-4 d-flex justify-content-between fw-bold fs-5">
+          <span>Total</span>
+          <span *ngIf="(subtotal$ | async) as subtotal">₹{{ (subtotal - discountAmount) | number:'1.2-2' }}</span>
+        </div>
+
+        <button class="btn btn-primary w-100 py-2" type="button" (click)="checkout()">Checkout</button>
+        <button class="btn btn-outline-secondary w-100 mt-2 py-2" type="button" (click)="clearCart()">Clear cart</button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #empty>
+    <div class="alert alert-info">Your cart is empty. Browse the menu to add delicious items.</div>
+    <a routerLink="/products" class="btn btn-primary">Browse menu</a>
+  </ng-template>
+</section>

@@ -1,0 +1,35 @@
+using AutoMapper;
+using RetailOrdering.Application.DTOs.Product;
+using RetailOrdering.Application.DTOs.Category;
+using RetailOrdering.Application.DTOs.Order;
+using RetailOrdering.Application.DTOs.Cart;
+using RetailOrdering.Application.DTOs.Coupon;
+using RetailOrdering.Domain.Entities;
+
+namespace RetailOrdering.Application.Mapping;
+
+public class AutoMapperProfile : Profile
+{
+    public AutoMapperProfile()
+    {
+        CreateMap<Product, ProductDto>().ReverseMap();
+        CreateMap<Category, CategoryDto>().ReverseMap();
+        CreateMap<Order, OrderDto>().ReverseMap();
+        CreateMap<OrderItem, OrderItemDto>()
+            .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))
+            .ReverseMap();
+        CreateMap<Cart, CartDto>().ReverseMap();
+        CreateMap<CartItem, CartItemDto>()
+            .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name))
+            .ForMember(dest => dest.ProductPrice, opt => opt.MapFrom(src => src.Product.Price))
+            .ForMember(dest => dest.SubTotal, opt => opt.MapFrom(src => src.Quantity * src.Product.Price))
+            .ReverseMap();
+        CreateMap<Coupon, CouponDto>().ReverseMap();
+
+        // Inventory mapping for API responses
+        CreateMap<Product, RetailOrdering.Application.DTOs.Inventory.InventoryDto>()
+            .ForMember(dest => dest.Category, opt => opt.MapFrom(src => src.Category != null ? src.Category.Name : null))
+            .ReverseMap();
+    }
+}
+

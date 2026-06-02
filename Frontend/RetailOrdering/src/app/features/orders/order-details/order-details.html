@@ -1,0 +1,175 @@
+<section class="container py-4 py-md-5 print-container">
+  
+  <div class="mb-4 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3 no-print">
+    <div>
+      <a routerLink="/orders" class="btn btn-sm btn-light border mb-2 text-decoration-none">
+        <i class="bi bi-arrow-left me-1"></i>Back to Orders
+      </a>
+      <h2 class="mb-0 fw-bold">Order Details</h2>
+    </div>
+    <div>
+      <button class="btn btn-outline-dark shadow-sm d-flex align-items-center" (click)="printInvoice()">
+        <i class="bi bi-printer me-2"></i> Print Invoice
+      </button>
+    </div>
+  </div>
+
+  <ng-container *ngIf="order; else emptyState">
+    
+    <div class="card shadow-sm border-0 mb-4 rounded-4 overflow-hidden">
+      <div class="card-body p-4 p-md-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h4 class="fw-bold mb-1">Order #{{ order.id }}</h4>
+            <p class="text-muted mb-0">Placed on {{ order.createdAt | date:'medium' }}</p>
+          </div>
+          <div class="text-end">
+            <span [class]="getStatusClass(order.status)" class="px-3 py-2 rounded-pill fs-6 fw-medium shadow-sm">
+              {{ order.status }}
+            </span>
+          </div>
+        </div>
+
+        <div class="position-relative mt-5 mb-3" *ngIf="order.status !== 'Cancelled'">
+          <div class="progress" style="height: 6px;">
+            <div class="progress-bar bg-primary" role="progressbar" [style.width]="progressWidth"></div>
+          </div>
+          <div class="d-flex justify-content-between position-absolute w-100 top-0" style="transform: translateY(-50%);">
+            <div class="step text-center">
+              <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto shadow" style="width: 32px; height: 32px;"><i class="bi bi-check"></i></div>
+              <small class="fw-medium mt-2 d-block text-primary">Pending</small>
+            </div>
+            <div class="step text-center">
+              <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto shadow" [ngClass]="progressWidth === '25%' ? 'bg-white border text-muted' : 'bg-primary text-white'" style="width: 32px; height: 32px;"><i class="bi bi-fire"></i></div>
+              <small class="fw-medium mt-2 d-block" [ngClass]="progressWidth === '25%' ? 'text-muted' : 'text-primary'">Preparing</small>
+            </div>
+            <div class="step text-center">
+              <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto shadow" [ngClass]="progressWidth === '100%' ? 'bg-primary text-white' : 'bg-white border text-muted'" style="width: 32px; height: 32px;"><i class="bi bi-house-door"></i></div>
+              <small class="fw-medium mt-2 d-block" [ngClass]="progressWidth === '100%' ? 'text-primary' : 'text-muted'">Delivered</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0 rounded-4">
+          <div class="card-header bg-white border-bottom py-3">
+            <h5 class="mb-0 fw-bold"><i class="bi bi-basket me-2 text-primary"></i>Itemized Receipt</h5>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0 custom-table">
+              <thead class="table-light text-muted small text-uppercase">
+                <tr>
+                  <th class="ps-4">Product Details</th>
+                  <th class="text-center">Format</th>
+                  <th class="text-end">Unit Price</th>
+                  <th class="text-center">Qty</th>
+                  <th class="text-end pe-4">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of (order.items || order.orderItems)">
+                  <td class="ps-4 py-3">
+                    <div class="d-flex align-items-center gap-3">
+                      <img [src]="item.imageUrl || item.product?.imageUrl || '/assets/placeholder-food.png'" 
+                           class="rounded-3 object-fit-cover shadow-sm" width="50" height="50" 
+                           onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=100&q=80'" />
+                      <div>
+                        <h6 class="mb-0 fw-bold text-dark">{{ item.productName || item.product?.name }}</h6>
+                        <small class="text-muted">{{ item.brandName || item.product?.brandName || 'QuickEats Kitchen' }}</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <span class="badge bg-light text-dark border">{{ item.packagingType || 'Standard' }}</span>
+                  </td>
+                  <td class="text-end text-muted">₹{{ (item.price || item.unitPrice) | number:'1.2-2' }}</td>
+                  <td class="text-center fw-medium">{{ item.quantity }}</td>
+                  <td class="text-end pe-4 fw-bold">₹{{ ((item.price || item.unitPrice) * item.quantity) | number:'1.2-2' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        
+        <div class="card shadow-sm border-0 rounded-4 mb-4 bg-light">
+          <div class="card-body p-4">
+            <h5 class="fw-bold mb-4">Payment Summary</h5>
+            <table class="table table-borderless table-sm mb-0">
+              <tbody>
+                <tr>
+                  <td class="text-muted ps-0">Subtotal ({{ items }} items)</td>
+                  <td class="text-end pe-0 fw-medium">₹{{ order.totalAmount | number:'1.2-2' }}</td>
+                </tr>
+                <tr>
+                  <td class="text-muted ps-0">Shipping & Handling</td>
+                  <td class="text-end pe-0 fw-medium text-success">Free</td>
+                </tr>
+                <tr *ngIf="order.discount > 0">
+                  <td class="text-danger ps-0">Coupon Applied</td>
+                  <td class="text-end pe-0 fw-bold text-danger">- ₹{{ order.discount | number:'1.2-2' }}</td>
+                </tr>
+                <tr>
+                  <td colspan="2"><hr class="border-secondary opacity-25 my-2"></td>
+                </tr>
+                <tr>
+                  <td class="ps-0 fs-5 fw-bold text-dark">Grand Total</td>
+                  <td class="text-end pe-0 fs-5 fw-black text-primary">₹{{ (order.totalAmount - (order.discount || 0)) | number:'1.2-2' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card shadow-sm border-0 rounded-4">
+          <div class="card-body p-4">
+            
+            <h6 class="fw-bold mb-3 text-uppercase small text-muted tracking-wider">Delivery Details</h6>
+            <table class="table table-borderless table-sm mb-4">
+              <tbody>
+                <tr>
+                  <td class="ps-0" style="width: 30px;"><i class="bi bi-person text-muted"></i></td>
+                  <td class="ps-0 fw-medium">{{ order.customerName || 'Registered Customer' }}</td>
+                </tr>
+                <tr>
+                  <td class="ps-0"><i class="bi bi-geo-alt text-muted"></i></td>
+                  <td class="ps-0 text-muted small">{{ order.shippingAddress || 'Digital / In-Store Pickup' }}</td>
+                </tr>
+                <tr>
+                  <td class="ps-0"><i class="bi bi-telephone text-muted"></i></td>
+                  <td class="ps-0 text-muted small">{{ order.phone || 'Phone not provided' }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h6 class="fw-bold mb-3 text-uppercase small text-muted tracking-wider">Payment Method</h6>
+            <table class="table table-borderless table-sm mb-0">
+              <tbody>
+                <tr>
+                  <td class="ps-0" style="width: 30px;"><i class="bi bi-credit-card text-muted"></i></td>
+                  <td class="ps-0 fw-medium">{{ order.paymentMethod || 'Online Secure Payment' }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #emptyState>
+    <div class="text-center py-5 bg-white rounded-4 shadow-sm border">
+      <div class="display-1 text-warning mb-3"><i class="bi bi-exclamation-circle"></i></div>
+      <h4 class="fw-bold">Invoice Not Found</h4>
+      <p class="text-muted">We couldn't locate the order details for this ID.</p>
+      <a routerLink="/orders" class="btn btn-primary mt-2">Return to Order History</a>
+    </div>
+  </ng-template>
+</section>

@@ -1,0 +1,13 @@
+﻿using AutoMapper;
+using RetailOrdering.Application.DTOs.Product;
+using RetailOrdering.Domain.Entities;
+
+namespace RetailOrdering.Application.Mapping;
+
+public class AutoMapperProfile : Profile
+{
+    public AutoMapperProfile()
+    {
+        CreateMap<Product, ProductDto>().ReverseMap();
+    }
+}
